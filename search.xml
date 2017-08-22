@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[png图片隐写]]></title>
+    <url>%2F2017%2F08%2F22%2F1%2F</url>
+    <content type="text"><![CDATA[&nbsp;&nbsp;这是之前做一道图片隐写题目学到的东西，补充一下之前的写图片隐写术。 考察内容1.LSB隐写 2.图片修复题目图片 知识储备扔一下相关学习的网站： 世安杯-LSB隐写-png：http://blog.csdn.net/fuzz_nancheng/article/details/53384353?locationNum=4&amp;fps=1 CTF之隐写：http://www.jianshu.com/p/02fdd5edd9fc 隐写术总结：http://bobao.360.cn/learning/detail/243.html stegsolve的用法：Stegsolve——Analyse——Frame Browser。浏览每个颜色通道的每一位，看是否隐藏了二维码（二维码在线解码：http://tool.chinaz.com/qrcode/） Stegsolve——Analyse——Data Extract。这个是使用ASCII隐写的时候可以查看的。 Stegsolve——Analyse——file format。查看文件格式，结合IDAT结构是否异常，结合编程。 Stegsolve——Analyse——frame browser。可以查看GIF文件每一帧的图片。 Stegsolve——Analyse——image combiner双图分析 LSB隐写&nbsp;&nbsp;这个题学到很多知识。简述一下，先看到提示，最低最低位，最开始跑偏了，想成了图片缺失，在最低位出现flag，后来改了像素，变成了另外一张图片，（当时的启发由于这个网站：http://www.jianshu.com/p/02fdd5edd9fc） 后来出现的图片出现了类似像素的东西，就很丑，，然后也不会了，再看一下，是一个png图片，考虑扔进stegsolve看一下，最低位， 隐约间看到了key:paaaasword LSB &nbsp;&nbsp;哎呦喂，以为出来了，看到hint，秘密之所以是秘密，因为秘密需要秘密去探寻，就考虑里面怕是有txt，LSB隐写，喜极而泣的在kali里面搞啊搞（搞的方法是：使用一个github上一个工具来处理-cloacked-pixel(具体用法见https://github.com/cyberinc/cloacked-pixel)。 &nbsp;&nbsp;我在kali下进行测试的。先将文件解压，并将png文件放进去，在命令行下进入到该文件夹。），密码试了7次（可能不止，还有自己输错的），最后密码是 ： paaaasword大概是在kali里面这样的情况： &nbsp;&nbsp;然后使用命令python lsb.py extract misc2.png 111.txt paaaassword可以得到隐写的文件111.txt。 ps:extract指的是提取misc2.png指的是导入文件名111.txt指的是导出文件名paaaasword指的是密码（此处根据提示猜测） &nbsp;&nbsp;当然，我天真的以为，txt里面就是我心心念念的flag，打开，试了的所有txt都是乱码， 图片修复我猜里面还有一个图片，winhex打开，看一下文件头， &nbsp;&nbsp;啧，和这个png很像嘛，百度一下文件头，http://www.jianshu.com/p/02fdd5edd9fc文件怕是损坏了，修复出来，编辑——粘贴字节8， 改后缀，png，看到曙光了，是个二维码， &nbsp;&nbsp;哇，兴奋的搓手手，赶紧在线解密， ，啥，识别不出来，用手机，还是识别不出来，哇，对比一下正常的二维码，定位点呢，定位点不对啊。搞到ps里面，emmm，截图成四块，第四块好像有一个反向，再拼起来，扫一下，终于对了。 做出来之后的我 本来还想打爆出题人，但是现在已经没有力气了。不过真的学到很多，嘻嘻嘻~]]></content>
+      <categories>
+        <category>CTF-Misc</category>
+      </categories>
+      <tags>
+        <tag>CTF-Misc</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[图片隐写术总结]]></title>
     <url>%2F2017%2F08%2F21%2F1%2F</url>
     <content type="text"><![CDATA[一直比较喜欢做杂项（虽然还是很垃圾），就感觉很有意思。总结了一些关于图片隐写的姿势，一起学习~ 1.另存为图片 （还有直接看文件信息，可能就在文件信息里面） 2.改后缀 zip / rar /txt3.扔winhex 这里要看文件头和文件结束的位置 Jpg文件头：FFD8FF，结尾都是FF D9 gif的开头是GIF8（47494638） PNG (png)，文件头：89504E47 ZIP Archive (zip)，文件头：504B0304 RAR Archive (rar)，文件头：52617221 …… 这是一些文件头标志的网站：http://www.cnblogs.com/mq0036/p/3912355.html 4.修复文件 5.分离图片：扔binwalk #binwalk 2.jpg 找到偏移位置 #dd if=2.jpg of=1.jpg skip=偏移位置 bs=1 if是指定输入文件，of是指定输出文件， skip是指定从输入文件开头跳过XXX(140147)个块后再开始复制， bs设置每次读写块的大小为1字节 。 还可以使用foremost 分离命令： #foremost 2.jpg 他会分离之后自己储存到一个ouput的文件夹，里面就有出现的分离图片 6.谷歌识图，百度识图 7.png图片 ①可能还会有图片要拉长一些 ②看低位（stegsolve） 8.base 64 转化成为图片 http://www.tuicool.com/articles/VviyAfY CTF图片隐写术http://www.jianshu.com/p/02fdd5edd9fc CTF隐写总结 （有png相关题目）]]></content>
