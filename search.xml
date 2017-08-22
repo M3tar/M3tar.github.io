@@ -1,99 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-    
-    <entry>
-      <title><![CDATA[图片隐写术总结]]></title>
-      <url>/2017/08/21/1/</url>
-      <content type="html"><![CDATA[<p>一直比较喜欢做杂项（虽然还是很垃圾），就感觉很有意思。总结了一些关于图片隐写的姿势，一起学习~</p>
-<p>1.另存为图片 （还有直接看文件信息，可能就在文件信息里面）  </p>
-<p>2.改后缀 zip / rar /txt<br><a id="more"></a><br>3.扔winhex  这里要看文件头和文件结束的位置<br>  Jpg文件头：FFD8FF，结尾都是FF D9<br>  gif的开头是GIF8（47494638）<br>  PNG (png)，文件头：89504E47<br>  ZIP Archive (zip)，文件头：504B0304<br>  RAR Archive (rar)，文件头：52617221<br>  ……<br>  这是一些文件头标志的网站：<a href="http://www.cnblogs.com/mq0036/p/3912355.html" target="_blank" rel="external">http://www.cnblogs.com/mq0036/p/3912355.html</a>  </p>
-<p>4.修复文件  </p>
-<p>5.分离图片：扔binwalk</p>
-<p>  #binwalk 2.jpg<br>  找到偏移位置</p>
-<p>  #dd if=2.jpg of=1.jpg skip=偏移位置 bs=1</p>
-<p>  if是指定输入文件，of是指定输出文件，<br>  skip是指定从输入文件开头跳过XXX(140147)个块后再开始复制，<br>  bs设置每次读写块的大小为1字节 。</p>
-<p>  还可以使用foremost</p>
-<p>  分离命令： #foremost 2.jpg 他会分离之后自己储存到一个ouput的文件夹，里面就有出现的分离图片</p>
-<p>6.谷歌识图，百度识图</p>
-<p>7.png图片</p>
-<p> ①可能还会有图片要拉长一些</p>
-<p> ②看低位（stegsolve）</p>
-<p>8.base 64 转化成为图片</p>
-<p><a href="http://www.tuicool.com/articles/VviyAfY" target="_blank" rel="external">http://www.tuicool.com/articles/VviyAfY</a> CTF图片隐写术<br><a href="http://www.jianshu.com/p/02fdd5edd9fc" target="_blank" rel="external">http://www.jianshu.com/p/02fdd5edd9fc</a>   CTF隐写总结 （有png相关题目）</p>
-]]></content>
-      
-        <categories>
-            
-            <category> CTF-Misc </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> CTF-Misc </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[音频隐写 MP3stego+wav隐写+题目]]></title>
-      <url>/2017/08/20/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99-MP3stego-wav%E9%9A%90%E5%86%99-%E9%A2%98%E7%9B%AE/</url>
-      <content type="html"><![CDATA[<p><strong>摘要：</strong> 音频隐写，遇见的比较少，这里总结一下我遇见过的一些关于音频隐写的题目，以后遇见其他类型的，再进行补充。</p>
-<h2 id="这是最简单的那种"><a href="#这是最简单的那种" class="headerlink" title="这是最简单的那种"></a>这是<font color="red"><strong>最简单</strong></font>的那种</h2><p>&nbsp;　当年年少无知，也不知道很多厉害的姿势，就<font color="#FF9900">直接把歌曲输入了网易云，把歌手或者专辑找出来了，然后直接提交flag</font><br><a id="more"></a></p>
-<h2 id="MP3stego"><a href="#MP3stego" class="headerlink" title="MP3stego"></a><font color="red">MP3stego</font></h2><h3 id="1-知识储备"><a href="#1-知识储备" class="headerlink" title="1.知识储备"></a>1.知识储备</h3><p>关于MP3stego用法：<a href="http://blog.csdn.net/sinat_38134380/article/details/69789665" target="_blank" rel="external">http://blog.csdn.net/sinat_38134380/article/details/69789665</a>    </p>
-<h3 id="2-题目分析"><a href="#2-题目分析" class="headerlink" title="2.题目分析"></a>2.题目分析</h3><p>  1）下载MP3stego  </p>
-<p>  2）将需要分析的mp3文件拖到Decode.exe所在的目录，如 下面的sycgeek-mp3.mp3</p>
-<p>  3） 开始运行cmd，进入有mp3stego的磁盘</p>
-<p>  <img src="/upload_images/1.png" alt=""></p>
-<p>  4）<font color="red">-X是获取隐藏的东西 -P后面写密码</font><br>  <img src="/upload_images/2.png" alt="">  </p>
-<p>  5）会在该目录下生成一个新的txt文档sycgeek-mp3.mp3.txt，打开<br>   <img src="/upload_images/3.png" alt="">  </p>
-<h2 id="wav隐写"><a href="#wav隐写" class="headerlink" title="wav隐写"></a><font color="red">wav隐写</font></h2><h3 id="1-知识储备-1"><a href="#1-知识储备-1" class="headerlink" title="1.知识储备"></a>1.知识储备</h3><font color="#FF9900"><br>wav隐写-Audacity–silenteye<br><br>1）-打开wav文件，Audacity-效果-反向-播放<br><br>2）-Audacity-文件名-频谱图<br><br>3）-声道里面夹杂着莫斯密码，短的代表’.’,长的代表’-’<br><br>4）-Audacity-频谱图-attach-点击频谱-然后点击修改spectrogram setting，把8000改为48000<br><br>5）-电话音分析（<a href="http://dialabc.com/sound/detect/）" target="_blank" rel="external">http://dialabc.com/sound/detect/）</a><br></font>
-
-<h3 id="2-相关资源"><a href="#2-相关资源" class="headerlink" title="2.相关资源"></a>2.相关资源</h3><font color="#FF9900"><br>这里再贴上两个有关的wav题目隐写的做法：<br><br><a href="http://www.sohu.com/a/116298237_468673" target="_blank" rel="external">http://www.sohu.com/a/116298237_468673</a><br><br><a href="http://www.hackdig.com/08/hack-38263.htm" target="_blank" rel="external">http://www.hackdig.com/08/hack-38263.htm</a><br></font>  
-
-<h3 id="3-题目分析"><a href="#3-题目分析" class="headerlink" title="3.题目分析"></a>3.题目分析</h3><p>下面写一个我自己遇见的关于wav题目的隐写姿势</p>
-<p>链接: <a href="https://pan.baidu.com/s/1eS7s8iY" target="_blank" rel="external">https://pan.baidu.com/s/1eS7s8iY</a><br>密码: 53dv</p>
-<p>分析此题：首先把这个题扔到Audacity里面，因为很容易就能听出来他有问题，就考虑看一下频谱图（当然还可以看音频轨道、效果、高音、音频波形），考虑是不是数字隐藏。这个题，把中间的灰色的放大放大，放大</p>
-<p> <img src="/upload_images/4.png" alt=""></p>
-<p>emmm ，经过百度，这里有很多种加密，除了上面列举的根据波形图的0 1 加密，摩斯电码加密，我自己在做这个题的时候，还考虑了粗细会不会是表示0 1，还有条形码，经过放大，然后画下来，笔头是个好东西，<br><img src="/upload_images/5.png" alt=""><br>这是个密码呀~，嘻嘻嘻，很简单了吧，猪圈密码。最后还要考虑一下密码的大小写哦~ 真是个磨人的小妖精~</p>
-<p>Flag: D0g3{ahhhhhhhhh}</p>
-]]></content>
-      
-        <categories>
-            
-            <category> CTF-Misc </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> CTF-Misc </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Hello World]]></title>
-      <url>/2017/08/18/hello-world/</url>
-      <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.<br><a id="more"></a></p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-      
-        
-    </entry>
-    
-  
-  
+<search>
+  <entry>
+    <title><![CDATA[图片隐写术总结]]></title>
+    <url>%2F2017%2F08%2F21%2F1%2F</url>
+    <content type="text"><![CDATA[一直比较喜欢做杂项（虽然还是很垃圾），就感觉很有意思。总结了一些关于图片隐写的姿势，一起学习~ 1.另存为图片 （还有直接看文件信息，可能就在文件信息里面） 2.改后缀 zip / rar /txt3.扔winhex 这里要看文件头和文件结束的位置 Jpg文件头：FFD8FF，结尾都是FF D9 gif的开头是GIF8（47494638） PNG (png)，文件头：89504E47 ZIP Archive (zip)，文件头：504B0304 RAR Archive (rar)，文件头：52617221 …… 这是一些文件头标志的网站：http://www.cnblogs.com/mq0036/p/3912355.html 4.修复文件 5.分离图片：扔binwalk #binwalk 2.jpg 找到偏移位置 #dd if=2.jpg of=1.jpg skip=偏移位置 bs=1 if是指定输入文件，of是指定输出文件， skip是指定从输入文件开头跳过XXX(140147)个块后再开始复制， bs设置每次读写块的大小为1字节 。 还可以使用foremost 分离命令： #foremost 2.jpg 他会分离之后自己储存到一个ouput的文件夹，里面就有出现的分离图片 6.谷歌识图，百度识图 7.png图片 ①可能还会有图片要拉长一些 ②看低位（stegsolve） 8.base 64 转化成为图片 http://www.tuicool.com/articles/VviyAfY CTF图片隐写术http://www.jianshu.com/p/02fdd5edd9fc CTF隐写总结 （有png相关题目）]]></content>
+      <categories>
+        <category>CTF-Misc</category>
+      </categories>
+      <tags>
+        <tag>CTF-Misc</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[音频隐写 MP3stego+wav隐写+题目]]></title>
+    <url>%2F2017%2F08%2F20%2F%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99-MP3stego-wav%E9%9A%90%E5%86%99-%E9%A2%98%E7%9B%AE%2F</url>
+    <content type="text"><![CDATA[摘要： 音频隐写，遇见的比较少，这里总结一下我遇见过的一些关于音频隐写的题目，以后遇见其他类型的，再进行补充。 这是最简单的那种&nbsp; 当年年少无知，也不知道很多厉害的姿势，就直接把歌曲输入了网易云，把歌手或者专辑找出来了，然后直接提交flag MP3stego1.知识储备关于MP3stego用法：http://blog.csdn.net/sinat_38134380/article/details/69789665 2.题目分析 1）下载MP3stego 2）将需要分析的mp3文件拖到Decode.exe所在的目录，如 下面的sycgeek-mp3.mp3 3） 开始运行cmd，进入有mp3stego的磁盘 4）-X是获取隐藏的东西 -P后面写密码 5）会在该目录下生成一个新的txt文档sycgeek-mp3.mp3.txt，打开 wav隐写1.知识储备wav隐写-Audacity–silenteye1）-打开wav文件，Audacity-效果-反向-播放2）-Audacity-文件名-频谱图3）-声道里面夹杂着莫斯密码，短的代表’.’,长的代表’-’4）-Audacity-频谱图-attach-点击频谱-然后点击修改spectrogram setting，把8000改为480005）-电话音分析（http://dialabc.com/sound/detect/） 2.相关资源这里再贴上两个有关的wav题目隐写的做法：http://www.sohu.com/a/116298237_468673http://www.hackdig.com/08/hack-38263.htm 3.题目分析下面写一个我自己遇见的关于wav题目的隐写姿势 链接: https://pan.baidu.com/s/1eS7s8iY密码: 53dv 分析此题：首先把这个题扔到Audacity里面，因为很容易就能听出来他有问题，就考虑看一下频谱图（当然还可以看音频轨道、效果、高音、音频波形），考虑是不是数字隐藏。这个题，把中间的灰色的放大放大，放大 emmm ，经过百度，这里有很多种加密，除了上面列举的根据波形图的0 1 加密，摩斯电码加密，我自己在做这个题的时候，还考虑了粗细会不会是表示0 1，还有条形码，经过放大，然后画下来，笔头是个好东西，这是个密码呀~，嘻嘻嘻，很简单了吧，猪圈密码。最后还要考虑一下密码的大小写哦~ 真是个磨人的小妖精~ Flag: D0g3{ahhhhhhhhh}]]></content>
+      <categories>
+        <category>CTF-Misc</category>
+      </categories>
+      <tags>
+        <tag>CTF-Misc</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2017%2F08%2F18%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
 </search>
