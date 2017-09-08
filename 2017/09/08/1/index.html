@@ -94,21 +94,21 @@
 
 
 
-<meta name="description" content="蚕丛及鱼凫，开国何茫然。 前言内存四区，之前学C语言的时候，就模模糊糊的看了一下，也没有很仔细的琢磨，后来学PHP和Java在看一些视频的时候，就看到了那些培训的老师，都对这些讲述的很细。有必要系统的总结一下啦，不然底层都弄不好，还怎么学习啊。这里就懒得去找其他语言的例子来讲了，就用C语言来讲一下吧。 入门案例 详解内存四区图解内存四区 内存四区介绍栈区由编译器自动分配释放, 存放函数的参数值,局">
+<meta name="description" content="蚕丛及鱼凫，开国何茫然。 前言内存四区，之前学C语言的时候，就模模糊糊的看了一下，也没有很仔细的琢磨，后来学PHP和Java在看一些视频的时候，就看到了那些培训的老师，都对这些讲述的很细。有必要系统的总结一下啦，不然底层都弄不好，还怎么学习啊。这里就懒得去找其他语言的例子来讲了，就用C语言来讲一下吧。">
 <meta name="keywords" content="数据结构">
 <meta property="og:type" content="article">
 <meta property="og:title" content="内存四区的理解">
 <meta property="og:url" content="http://yoursite.com/2017/09/08/1/index.html">
 <meta property="og:site_name" content="M3tar&#39;s Blog">
-<meta property="og:description" content="蚕丛及鱼凫，开国何茫然。 前言内存四区，之前学C语言的时候，就模模糊糊的看了一下，也没有很仔细的琢磨，后来学PHP和Java在看一些视频的时候，就看到了那些培训的老师，都对这些讲述的很细。有必要系统的总结一下啦，不然底层都弄不好，还怎么学习啊。这里就懒得去找其他语言的例子来讲了，就用C语言来讲一下吧。 入门案例 详解内存四区图解内存四区 内存四区介绍栈区由编译器自动分配释放, 存放函数的参数值,局">
+<meta property="og:description" content="蚕丛及鱼凫，开国何茫然。 前言内存四区，之前学C语言的时候，就模模糊糊的看了一下，也没有很仔细的琢磨，后来学PHP和Java在看一些视频的时候，就看到了那些培训的老师，都对这些讲述的很细。有必要系统的总结一下啦，不然底层都弄不好，还怎么学习啊。这里就懒得去找其他语言的例子来讲了，就用C语言来讲一下吧。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/upload_images/n1.png">
 <meta property="og:image" content="http://yoursite.com/upload_images/n2.png">
 <meta property="og:image" content="http://yoursite.com/upload_images/n3.jpg">
-<meta property="og:updated_time" content="2017-09-08T15:23:17.958Z">
+<meta property="og:updated_time" content="2017-09-08T15:31:50.916Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="内存四区的理解">
-<meta name="twitter:description" content="蚕丛及鱼凫，开国何茫然。 前言内存四区，之前学C语言的时候，就模模糊糊的看了一下，也没有很仔细的琢磨，后来学PHP和Java在看一些视频的时候，就看到了那些培训的老师，都对这些讲述的很细。有必要系统的总结一下啦，不然底层都弄不好，还怎么学习啊。这里就懒得去找其他语言的例子来讲了，就用C语言来讲一下吧。 入门案例 详解内存四区图解内存四区 内存四区介绍栈区由编译器自动分配释放, 存放函数的参数值,局">
+<meta name="twitter:description" content="蚕丛及鱼凫，开国何茫然。 前言内存四区，之前学C语言的时候，就模模糊糊的看了一下，也没有很仔细的琢磨，后来学PHP和Java在看一些视频的时候，就看到了那些培训的老师，都对这些讲述的很细。有必要系统的总结一下啦，不然底层都弄不好，还怎么学习啊。这里就懒得去找其他语言的例子来讲了，就用C语言来讲一下吧。">
 <meta name="twitter:image" content="http://yoursite.com/upload_images/n1.png">
 
 
@@ -395,7 +395,7 @@
 
       
         <p><blockquote class="blockquote-center"><br>蚕丛及鱼凫，开国何茫然。</blockquote></p>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>内存四区，之前学C语言的时候，就模模糊糊的看了一下，也没有很仔细的琢磨，后来学PHP和Java在看一些视频的时候，就看到了那些培训的老师，都对这些讲述的很细。有必要系统的总结一下啦，不然底层都弄不好，还怎么学习啊。<br>这里就懒得去找其他语言的例子来讲了，就用C语言来讲一下吧。</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>内存四区，之前学C语言的时候，就模模糊糊的看了一下，也没有很仔细的琢磨，后来学PHP和Java在看一些视频的时候，就看到了那些培训的老师，都对这些讲述的很细。有必要系统的总结一下啦，不然底层都弄不好，还怎么学习啊。<br>这里就懒得去找其他语言的例子来讲了，就用C语言来讲一下吧。<br><a id="more"></a></p>
 <h2 id="入门案例"><a href="#入门案例" class="headerlink" title="入门案例"></a>入门案例</h2><p><img src="/upload_images/n1.png" alt=""></p>
 <h2 id="详解内存四区"><a href="#详解内存四区" class="headerlink" title="详解内存四区"></a>详解内存四区</h2><h3 id="图解内存四区"><a href="#图解内存四区" class="headerlink" title="图解内存四区"></a>图解内存四区</h3><p><img src="/upload_images/n2.png" alt=""></p>
 <h3 id="内存四区介绍"><a href="#内存四区介绍" class="headerlink" title="内存四区介绍"></a>内存四区介绍</h3><h4 id="栈区"><a href="#栈区" class="headerlink" title="栈区"></a>栈区</h4><p>由编译器自动分配释放, 存放函数的参数值,局部变量等.  </p>
