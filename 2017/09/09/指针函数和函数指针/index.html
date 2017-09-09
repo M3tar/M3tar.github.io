@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="C语言,数据结构," />
 
 
 
@@ -94,16 +94,18 @@
 
 
 
-<meta name="description" content="When your talent still can not afford your ambition.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="M3tar&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/archives/2017/09/index.html">
+<meta name="description" content="冰冻三尺，非一日之寒。 前言指针函数，函数指针，指针数组，数组指针。这些个概念，感觉一直都是迷迷糊糊的不是特别的明白。最近因为在做SYC的C语言，发现后面的题，基本上都是指针指过来指过去的，就索性用了一晚上来弄这个东西。记录一下，以便以后遗忘还可以再看。">
+<meta name="keywords" content="C语言,数据结构">
+<meta property="og:type" content="article">
+<meta property="og:title" content="指针函数和函数指针">
+<meta property="og:url" content="http://yoursite.com/2017/09/09/指针函数和函数指针/index.html">
 <meta property="og:site_name" content="M3tar&#39;s Blog">
-<meta property="og:description" content="When your talent still can not afford your ambition.">
+<meta property="og:description" content="冰冻三尺，非一日之寒。 前言指针函数，函数指针，指针数组，数组指针。这些个概念，感觉一直都是迷迷糊糊的不是特别的明白。最近因为在做SYC的C语言，发现后面的题，基本上都是指针指过来指过去的，就索性用了一晚上来弄这个东西。记录一下，以便以后遗忘还可以再看。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-09-09T03:34:36.271Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="M3tar&#39;s Blog">
-<meta name="twitter:description" content="When your talent still can not afford your ambition.">
+<meta name="twitter:title" content="指针函数和函数指针">
+<meta name="twitter:description" content="冰冻三尺，非一日之寒。 前言指针函数，函数指针，指针数组，数组指针。这些个概念，感觉一直都是迷迷糊糊的不是特别的明白。最近因为在做SYC的C语言，发现后面的题，基本上都是指针指过来指过去的，就索性用了一晚上来弄这个东西。记录一下，以便以后遗忘还可以再看。">
 
 
 
@@ -132,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2017/09/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/09/09/指针函数和函数指针/"/>
 
 
 
 
 
-  <title>归档 | M3tar's Blog</title>
+  <title>指针函数和函数指针 | M3tar's Blog</title>
   
 
 
@@ -157,7 +159,7 @@
     
   
 
-  <div class="container sidebar-position-left  page-archive  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -285,148 +287,356 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/09/指针函数和函数指针/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="M3tar">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/31129586?v=4&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="M3tar's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">指针函数和函数指针</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-09T09:40:35+08:00">
+                2017-09-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 9 篇日志。 继续努力。
-      </span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据结构/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构</span>
+                  </a>
+                </span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
-          </div>
-        
-        
 
-        
+          
+            
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/09/指针函数和函数指针/" itemprop="url">
-              
-                <span itemprop="name">指针函数和函数指针</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-09T09:40:35+08:00"
-              content="2017-09-09" >
-          09-09
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+          
 
+        </div>
+      </header>
+    
 
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/08/1/" itemprop="url">
-              
-                <span itemprop="name">内存四区的理解</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-08T22:18:22+08:00"
-              content="2017-09-08" >
-          09-08
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
+      
+        <p><blockquote class="blockquote-center"><br>冰冻三尺，非一日之寒。</blockquote></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>指针函数，函数指针，指针数组，数组指针。这些个概念，感觉一直都是迷迷糊糊的不是特别的明白。最近因为在做SYC的C语言，发现后面的题，基本上都是指针指过来指过去的，就索性用了一晚上来弄这个东西。记录一下，以便以后遗忘还可以再看。<a id="more"></a></p>
+<h2 id="指针函数"><a href="#指针函数" class="headerlink" title="指针函数"></a>指针函数</h2><h3 id="什么是指针函数"><a href="#什么是指针函数" class="headerlink" title="什么是指针函数"></a>什么是指针函数</h3><p>  指针函数 ： 返回值是指针的函数 </p>
+<p>  指针函数<font color="red">本质</font>是一个函数，函数返回类型是某一类型的指针。</p>
+<h3 id="指针函数怎么定义"><a href="#指针函数怎么定义" class="headerlink" title="指针函数怎么定义"></a>指针函数怎么定义</h3><p>类型标识符 *函数名(参数表)  </p>
+<pre><code>int *f(int x,int y) 
+</code></pre><p>()优先级高，先与f结合成为一个函数，再由int *说明一个这是一个整型的指针函数。</p>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><h4 id="快速入门"><a href="#快速入门" class="headerlink" title="快速入门"></a>快速入门</h4><p>这个使用法，我是这样理解的，因为这个函数是有返回值的，返回值的类型是一个地址，那么用的时候，就应该是这样。  </p>
+<pre><code>float *fun(int x);//指针函数
+float *p;//定义的一个指针
+p = fun(a);//fun(a)是一个地址值，因为定义上他是一个指针函数，那么，它的返回值就是一个地址
+</code></pre><h4 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h4><pre><code>#include &lt;stdio.h&gt;
 
-        
-        
+float *search(float (*pointer)[4], int n);//数组指针可以看下一章
 
-        
+int main(void)
+{
+    float score[][4]={{60,70,80,90},{56,89,67,88},{34,78,90,66}};
+    float *p;
+    int i, m;
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    printf(&quot;enter the number of student:&quot;);
+    scanf(&quot;%d&quot;, &amp;m);
+    printf(&quot;The scores of No. %d are:\n&quot;,m);
+    p=search(score, m);//这里就是指针函数的应用，返回的就是一个地址
+    for (i = 0; i &lt; 4; i++)
+    {
+        printf(&quot;%5.2f\t&quot;, *(p + i));  //*(p + i)，第m行第i列的元素值（m和i都从0编号）
+    }
+    printf(&quot;\n&quot;);
+    return 0;
+}
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/07/SYC基础C语言-A-P-writeup/" itemprop="url">
-              
-                <span itemprop="name">SYC基础C语言(A~P)writeup</span>
-              
-            </a>
-        
-      </h2>
+float *search(float (*pointer)[4], int n)
+{
+    float * pt;
+    pt = *(pointer + n); //将第n行第0列的地址给pt，以供返回
+    return (pt);//这里返回的就是一个地址
+}
+</code></pre><h2 id="函数指针"><a href="#函数指针" class="headerlink" title="函数指针"></a>函数指针</h2><h3 id="什么是函数指针"><a href="#什么是函数指针" class="headerlink" title="什么是函数指针"></a>什么是函数指针</h3><p>函数指针 ： 指向函数的指针</p>
+<p>函数指针<font color="red">本质</font>是一个指针变量，是指向函数的指针变量</p>
+<h3 id="函数指针怎么定义"><a href="#函数指针怎么定义" class="headerlink" title="函数指针怎么定义"></a>函数指针怎么定义</h3><p>类型说明符 (* 指针变量名（函数名）)   (参数)</p>
+<pre><code>int (*f)(int a, int b);
+</code></pre><p>()运算符，自左至右，首先说明f是一个指针，指向一个返回值是整型的函数。</p>
+<h3 id="使用-1"><a href="#使用-1" class="headerlink" title="使用"></a>使用</h3><h4 id="快速入门-1"><a href="#快速入门-1" class="headerlink" title="快速入门"></a>快速入门</h4><pre><code>int (*f) (int x); /*声明一个函数指针 */
+f=func; /* 将func函数的首地址赋给指针f */
+</code></pre><p>指向函数的指针包含了函数的地址的入口地址，可以通过它来<font color="red">调用函数。</font>  </p>
+<p>这个特殊的指针指向一个返回整型值的函数。指针的声明必须和它指向函数的声明保持一致。  </p>
+<p>指针名和指针运算符外面的括号改变了默认的运算符优先级。如果没有圆括号，就变成了一个返回整型指针的函数的原型声明。</p>
+<h4 id="实现-1"><a href="#实现-1" class="headerlink" title="实现"></a>实现</h4><h5 id="案例1"><a href="#案例1" class="headerlink" title="案例1"></a>案例1</h5><pre><code>#include  &lt;stdio.h&gt;
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-07T10:22:30+08:00"
-              content="2017-09-07" >
-          09-07
-        </time>
-      </div>
+int max(int x,int y)
+{
+    return (x&gt;y ? x : y);
+}
+int main(void)
+{
+    int (*p)(int ,int);//函数指针：数据类型标志符 （指针变量名）（形参列表）
+    int a,b,c;
+    p=max; //将max函数的首地址给指针f
+    scanf(&quot;%d%d&quot;,&amp;a,&amp;b);
+    c=(*p)(a,b); //指针进行调用函数
+    printf(&quot;a=%d,b=%d,max=%d\n&quot;,a,b,c);
+    return 0; 
+}
+/*这里p指的是一个指针变量，不像函数名字，他可以指向任何函数*/
+</code></pre><font color="blue">p变量里面存放了max函数的地址。<code>*p</code>，此时，就相当于是取这个函数了（可以这么去理解），用来进行调用函数了。<br><br>相当于是p存放了max这个函数的地址，在用指针去调用函数max时，需要写成（<code>*p</code>）这个样子</font>
 
-    </header>
-  </article>
+<h5 id="案例2"><a href="#案例2" class="headerlink" title="案例2"></a>案例2</h5><h6 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h6><p>下面的这个案例来说明一下上面这个问题</p>
+<pre><code>#include &lt;stdio.h&gt;
+int asdf(int a)
+{
+    printf(&quot;%d\n&quot;,a);
+    return 0;
+}
+int main(void)
+{
+    int (*p)(int);
+    asdf(5); //通过函数名调用函数
+    p=asdf; //将asdf函数的首地址给指针p
+    (*p)(5); //调用函数asdf
+    p(5);  //调用函数asdf
+    printf(&quot;asdf is %d,p is %d,*p is %d\n&quot;,asdf,p,*p);
+    return 0;
+
+}
+</code></pre><p>输出:</p>
+<pre><code>5
+5
+5
+asdf is 4198410,p is 4198410,*p is 4198410
+</code></pre><h6 id="解释"><a href="#解释" class="headerlink" title="解释"></a>解释</h6><p>1.通过函数名调用函数和通过函数指针调用函数的区别  </p>
+<p>答：   </p>
+<p>1) 通过函数名调用函数<br>eg:asdf(5);</p>
+<p>步骤：<br>根据已知函数地址调用对应函数。</p>
+<p>2) 函数指针调用函数<br>eg:(*p)(5);</p>
+<p>1.从指针中读取函数入口地址。<br>2.调用对应函数。</p>
+<p>它们之间的区别一句话概括，那就是函数名是入口地址的代号，只在编译时发挥作用（等价于一个固定地址，所以函数名不能被赋值），函数指针在执行期发挥作用（指针值可以变化，可以赋值。所以(*p)(5)与asdf(5)等价</p>
+<p>2.为什么(*p)(5)与p(5)结果相等  </p>
+<p>利用函数指针进行调用：  </p>
+<p>(*p)()<br>p()  </p>
+<p>很久很久以前C语言只允许前者，后来大家觉得这么写太麻烦就规定了后者能达到同样效果。后者在编译时和前者做相同的事情。它只是语法上的便利,本质上是一样的.  </p>
+<font color="orange"><br>类似的语法上的便利还有:<br><br>p-&gt;h 通过指针访问结构成员，等价于 (<em>p).h<br>p[n] 通过指针访问数组元素等价于 </em>(p+n) </font>
+
+<h5 id="案例三"><a href="#案例三" class="headerlink" title="案例三"></a>案例三</h5><pre><code> /*  函数指针的使用示例
+    在下面的例子中，着重学习如何通过fun函数中的第三个参数来实现对加减乘等操作的处理。
+    需要注意以下几点：
+    1. fun函数中第三个形参，函数指针的书写格式int (*p)(int, int)和使用格式(*p)(x, y)
+    2. 在调用fun函数时，送入的实参可以有两种形式。
+        A.  函数指针作为实参——注意ppp的定义格式       int (*ppp)(int, int);
+                                    ppp的赋值写法       ppp= max;    注意，没有括号！没有形参表！此处是将max函数在程序代码区中存储的首地址赋给ppp，并不是函数调用！
+                                    ppp作为实参的写法   fun(a, b, ppp)  没有括号，没有形参表！此处，fun的第三个参数ppp就是一个地址
+
+        B.  函数名称作为实参——注意书写格式            fun(a, b, add);
+                                     在C语言中，函数名字本身，和数组名称类似，代表了其在内存中存储的首地址
+    */
+
+#include &lt;stdio.h&gt;
+
+int fun(int x, int y, int (*p)(int, int));
+int max(int x, int y);
+int min(int x, int y);
+int add(int x, int y);
+
+int main(void)
+{
+    int a = 34, b = 22, result;
+    char n;
+    int (*ppp)(int, int);
+    ppp= NULL;
+    printf(&quot;请选择：1.求大值，2.求小值，3.求和:&quot;);
+    n = getchar();
+    switch(n)
+    {
+        case &apos;1&apos;:
+            ppp= max;
+            result = fun(a, b, ppp);
+            break;
+        case &apos;2&apos;:
+            result = fun(a, b, min);
+            break;
+        case &apos;3&apos;:
+            result = fun(a, b, add);
+            break;
+        default:
+            printf(&quot;选择错误！\n&quot;);
+    }
+    printf(&quot;%d\n&quot;, result);
+    return 0;
+}
+
+int fun(int x, int y, int (*p)(int, int)) //第三个参数需要一个指针p，该参数p是一个函数指针，是专门指向“有2个int型形参且返回int的这类函数”的指针
+{
+    int result;
+    result = (*p)(x, y);   //注意书写格式！  调用该类（int XXX(int, int)）函数所需要的实参，往往都是通过“外壳”函数fun的形参x和y传进来~~
+    return result;
+}
 
 
+/* 
+    注意！函数指针往往出现在当多个函数的函数类型相同的情况下！
+    需要注意的是，如果max，min和add函数的类型不是  int XXX(int, int)这种类型，则不能作为fun函数的第三个参数，而
+ fun函数如果不能将多个子函数进行整合，则fun函数将失去其存在的意义！
+ */
+
+int max(int x, int y)
+{
+    printf(&quot;大值是:&quot;);
+    return x &gt; y ? x : y;
+}
+
+int min(int x, int y)
+{
+    printf(&quot;小值是:&quot;);
+    return x &gt; y ? y : x;
+}
+
+int add(int x, int y)
+{
+    printf(&quot;和值是:&quot;);
+    return x + y;
+}
+</code></pre><h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>洋洋洒洒的总结了那么多，终于有一种恍然大悟的感觉了，再想一下。  </p>
+<p>函数指针：指向函数的指针，可以通过这个指针调用函数，前提是要把这个函数的地址传给指针，再调用函数（*指针变量名）  </p>
+<p>指针函数：返回值是指针类型的函数。因为返回的是一个地址，通常可以和数组结合一下。比如返回某一数组元素的地址。（由于返回的是地址，就直接函数名（形参）用就可以了）</p>
 
       
-
     </div>
+    
+    
+    
+    
+   
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/C语言/" rel="tag"><i class="fa fa-tag"></i> C语言</a>
+          
+            <a href="/tags/数据结构/" rel="tag"><i class="fa fa-tag"></i> 数据结构</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/09/08/1/" rel="next" title="内存四区的理解">
+                <i class="fa fa-chevron-left"></i> 内存四区的理解
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -434,6 +644,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -454,8 +668,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://avatars3.githubusercontent.com/u/31129586?v=4&s=460"
@@ -560,6 +783,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#指针函数"><span class="nav-number">2.</span> <span class="nav-text">指针函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是指针函数"><span class="nav-number">2.1.</span> <span class="nav-text">什么是指针函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#指针函数怎么定义"><span class="nav-number">2.2.</span> <span class="nav-text">指针函数怎么定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用"><span class="nav-number">2.3.</span> <span class="nav-text">使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#快速入门"><span class="nav-number">2.3.1.</span> <span class="nav-text">快速入门</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实现"><span class="nav-number">2.3.2.</span> <span class="nav-text">实现</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数指针"><span class="nav-number">3.</span> <span class="nav-text">函数指针</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是函数指针"><span class="nav-number">3.1.</span> <span class="nav-text">什么是函数指针</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数指针怎么定义"><span class="nav-number">3.2.</span> <span class="nav-text">函数指针怎么定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用-1"><span class="nav-number">3.3.</span> <span class="nav-text">使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#快速入门-1"><span class="nav-number">3.3.1.</span> <span class="nav-text">快速入门</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实现-1"><span class="nav-number">3.3.2.</span> <span class="nav-text">实现</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#案例1"><span class="nav-number">3.3.2.1.</span> <span class="nav-text">案例1</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#案例2"><span class="nav-number">3.3.2.2.</span> <span class="nav-text">案例2</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#代码"><span class="nav-number">3.3.2.2.1.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#解释"><span class="nav-number">3.3.2.2.2.</span> <span class="nav-text">解释</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#案例三"><span class="nav-number">3.3.2.3.</span> <span class="nav-text">案例三</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#后记"><span class="nav-number">4.</span> <span class="nav-text">后记</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -691,11 +930,9 @@
   
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
 
 
   
