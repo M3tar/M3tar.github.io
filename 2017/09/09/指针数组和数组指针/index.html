@@ -94,18 +94,23 @@
 
 
 
-<meta name="description" content="冰冻三尺，非一日之寒。 前言指针函数，函数指针，指针数组，数组指针。这些个概念，感觉一直都是迷迷糊糊的不是特别的明白。最近因为在做SYC的C语言，发现后面的题，基本上都是指针指过来指过去的，就索性用了一晚上来弄这个东西。记录一下，以便以后遗忘还可以再看。">
+<meta name="description" content="滴水石穿，非一日之功。 前言我觉得和前面一篇就是兄弟文了。这篇就写指针数组，数组指针的一些杂七杂八的东西了。虽然写起来很头疼，但是好记性不如烂笔头啊！然后再让我感叹一下，中文真是博大精深~">
 <meta name="keywords" content="C语言,数据结构">
 <meta property="og:type" content="article">
-<meta property="og:title" content="指针函数和函数指针">
-<meta property="og:url" content="http://yoursite.com/2017/09/09/指针函数和函数指针/index.html">
+<meta property="og:title" content="指针数组和数组指针">
+<meta property="og:url" content="http://yoursite.com/2017/09/09/指针数组和数组指针/index.html">
 <meta property="og:site_name" content="M3tar&#39;s Blog">
-<meta property="og:description" content="冰冻三尺，非一日之寒。 前言指针函数，函数指针，指针数组，数组指针。这些个概念，感觉一直都是迷迷糊糊的不是特别的明白。最近因为在做SYC的C语言，发现后面的题，基本上都是指针指过来指过去的，就索性用了一晚上来弄这个东西。记录一下，以便以后遗忘还可以再看。">
+<meta property="og:description" content="滴水石穿，非一日之功。 前言我觉得和前面一篇就是兄弟文了。这篇就写指针数组，数组指针的一些杂七杂八的东西了。虽然写起来很头疼，但是好记性不如烂笔头啊！然后再让我感叹一下，中文真是博大精深~">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-09T03:34:36.271Z">
+<meta property="og:image" content="http://yoursite.com/upload_images/6.png">
+<meta property="og:image" content="http://yoursite.com/upload_images/7.png">
+<meta property="og:image" content="http://yoursite.com/upload_images/8.png">
+<meta property="og:image" content="http://yoursite.com/upload_images/9.png">
+<meta property="og:updated_time" content="2017-09-09T07:26:09.171Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="指针函数和函数指针">
-<meta name="twitter:description" content="冰冻三尺，非一日之寒。 前言指针函数，函数指针，指针数组，数组指针。这些个概念，感觉一直都是迷迷糊糊的不是特别的明白。最近因为在做SYC的C语言，发现后面的题，基本上都是指针指过来指过去的，就索性用了一晚上来弄这个东西。记录一下，以便以后遗忘还可以再看。">
+<meta name="twitter:title" content="指针数组和数组指针">
+<meta name="twitter:description" content="滴水石穿，非一日之功。 前言我觉得和前面一篇就是兄弟文了。这篇就写指针数组，数组指针的一些杂七杂八的东西了。虽然写起来很头疼，但是好记性不如烂笔头啊！然后再让我感叹一下，中文真是博大精深~">
+<meta name="twitter:image" content="http://yoursite.com/upload_images/6.png">
 
 
 
@@ -134,13 +139,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/09/09/指针函数和函数指针/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/09/09/指针数组和数组指针/"/>
 
 
 
 
 
-  <title>指针函数和函数指针 | M3tar's Blog</title>
+  <title>指针数组和数组指针 | M3tar's Blog</title>
   
 
 
@@ -301,7 +306,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/09/指针函数和函数指针/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/09/指针数组和数组指针/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="M3tar">
@@ -318,7 +323,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">指针函数和函数指针</h1>
+          <h1 class="post-title" itemprop="name headline">指针数组和数组指针</h1>
         
 
         <div class="post-meta">
@@ -330,7 +335,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-09T09:40:35+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-09T11:40:22+08:00">
                 2017-09-09
               </time>
             
@@ -390,191 +395,218 @@
       
 
       
-        <p><blockquote class="blockquote-center"><br>冰冻三尺，非一日之寒。</blockquote></p>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>指针函数，函数指针，指针数组，数组指针。这些个概念，感觉一直都是迷迷糊糊的不是特别的明白。最近因为在做SYC的C语言，发现后面的题，基本上都是指针指过来指过去的，就索性用了一晚上来弄这个东西。记录一下，以便以后遗忘还可以再看。<a id="more"></a></p>
-<h2 id="指针函数"><a href="#指针函数" class="headerlink" title="指针函数"></a>指针函数</h2><h3 id="什么是指针函数"><a href="#什么是指针函数" class="headerlink" title="什么是指针函数"></a>什么是指针函数</h3><p>  指针函数 ： 返回值是指针的函数 </p>
-<p>  指针函数<font color="red">本质</font>是一个函数，函数返回类型是某一类型的指针。</p>
-<h3 id="指针函数怎么定义"><a href="#指针函数怎么定义" class="headerlink" title="指针函数怎么定义"></a>指针函数怎么定义</h3><p>类型标识符 *函数名(参数表)  </p>
-<pre><code>int *f(int x,int y) 
-</code></pre><p>()优先级高，先与f结合成为一个函数，再由int *说明一个这是一个整型的指针函数。</p>
-<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><h4 id="快速入门"><a href="#快速入门" class="headerlink" title="快速入门"></a>快速入门</h4><p>这个使用法，我是这样理解的，因为这个函数是有返回值的，返回值的类型是一个地址，那么用的时候，就应该是这样。  </p>
-<pre><code>float *fun(int x);//指针函数
-float *p;//定义的一个指针
-p = fun(a);//fun(a)是一个地址值，因为定义上他是一个指针函数，那么，它的返回值就是一个地址
-</code></pre><h4 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h4><pre><code>#include &lt;stdio.h&gt;
+        <p><blockquote class="blockquote-center"><br>滴水石穿，非一日之功。</blockquote></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我觉得和前面一篇就是兄弟文了。这篇就写指针数组，数组指针的一些杂七杂八的东西了。虽然写起来很头疼，但是好记性不如烂笔头啊！然后再让我感叹一下，中文真是博大精深~<a id="more"></a></p>
+<h2 id="指针数组"><a href="#指针数组" class="headerlink" title="指针数组"></a>指针数组</h2><h3 id="什么是指针数组"><a href="#什么是指针数组" class="headerlink" title="什么是指针数组"></a>什么是指针数组</h3><p>  指针数组 ：  数组的每一个元素是指针</p>
+<p>  指针数组：array of pointers，即用于存储指针的数组，也就是数组元素都是指针</p>
+<h3 id="指针数组怎么定义"><a href="#指针数组怎么定义" class="headerlink" title="指针数组怎么定义"></a>指针数组怎么定义</h3><p>类型* 数组名[数组长度]</p>
+<pre><code>int* p[n]  
+</code></pre><p>[]优先级高，先与p结合成为一个数组，再由int*说明这是一个整型指针数组，它有n个指针类型的数组元素。 </p>
+<p> 元素表示：<code>*p[i]</code>   <code>*(p[i])</code>是一样的，因为[]优先级高于*  </p>
+<font color="orange">注意：在实际应用中，对于指针数组，我们经常这样使用：</font>
 
-float *search(float (*pointer)[4], int n);//数组指针可以看下一章
-
-int main(void)
-{
-    float score[][4]={{60,70,80,90},{56,89,67,88},{34,78,90,66}};
-    float *p;
-    int i, m;
-
-    printf(&quot;enter the number of student:&quot;);
-    scanf(&quot;%d&quot;, &amp;m);
-    printf(&quot;The scores of No. %d are:\n&quot;,m);
-    p=search(score, m);//这里就是指针函数的应用，返回的就是一个地址
-    for (i = 0; i &lt; 4; i++)
-    {
-        printf(&quot;%5.2f\t&quot;, *(p + i));  //*(p + i)，第m行第i列的元素值（m和i都从0编号）
-    }
-    printf(&quot;\n&quot;);
-    return 0;
+<pre><code>typedef int* pInt;
+pInt a[4];
+</code></pre><h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><h4 id="快速入门"><a href="#快速入门" class="headerlink" title="快速入门"></a>快速入门</h4><p>如要将二维数组赋给一指针数组:</p>
+<pre><code>int *p[3];
+int a[3][4];
+for(i=0;i&lt;3;i++){
+p[i]=a[i]；
+p++; //该语句表示p数组指向下一个数组元素。注：此数组每一个元素都是一个指针
 }
+</code></pre><p>这里int *p[3] 表示一个一维数组内存放着三个指针变量，分别是p[0]、p[1]、p[2]<br>所以要分别赋值。</p>
+<h4 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h4><pre><code>/*
+    指针数组的使用示例
+    指针数组的概念——是一个数组，数组中的每个元素是一个指针。本例假设数组是一维的。（多维指针数组在实际中很少遇到）
+    本例采用简单选择排序，对指针数组中的所有元素进行排序。
 
-float *search(float (*pointer)[4], int n)
-{
-    float * pt;
-    pt = *(pointer + n); //将第n行第0列的地址给pt，以供返回
-    return (pt);//这里返回的就是一个地址
-}
-</code></pre><h2 id="函数指针"><a href="#函数指针" class="headerlink" title="函数指针"></a>函数指针</h2><h3 id="什么是函数指针"><a href="#什么是函数指针" class="headerlink" title="什么是函数指针"></a>什么是函数指针</h3><p>函数指针 ： 指向函数的指针</p>
-<p>函数指针<font color="red">本质</font>是一个指针变量，是指向函数的指针变量</p>
-<h3 id="函数指针怎么定义"><a href="#函数指针怎么定义" class="headerlink" title="函数指针怎么定义"></a>函数指针怎么定义</h3><p>类型说明符 (* 指针变量名（函数名）)   (参数)</p>
-<pre><code>int (*f)(int a, int b);
-</code></pre><p>()运算符，自左至右，首先说明f是一个指针，指向一个返回值是整型的函数。</p>
-<h3 id="使用-1"><a href="#使用-1" class="headerlink" title="使用"></a>使用</h3><h4 id="快速入门-1"><a href="#快速入门-1" class="headerlink" title="快速入门"></a>快速入门</h4><pre><code>int (*f) (int x); /*声明一个函数指针 */
-f=func; /* 将func函数的首地址赋给指针f */
-</code></pre><p>指向函数的指针包含了函数的地址的入口地址，可以通过它来<font color="red">调用函数。</font>  </p>
-<p>这个特殊的指针指向一个返回整型值的函数。指针的声明必须和它指向函数的声明保持一致。  </p>
-<p>指针名和指针运算符外面的括号改变了默认的运算符优先级。如果没有圆括号，就变成了一个返回整型指针的函数的原型声明。</p>
-<h4 id="实现-1"><a href="#实现-1" class="headerlink" title="实现"></a>实现</h4><h5 id="案例1"><a href="#案例1" class="headerlink" title="案例1"></a>案例1</h5><pre><code>#include  &lt;stdio.h&gt;
+    需要提醒注意的是，本例的排序只是改变了指针的指向，并没改变常量字符串在程序常量区里面内存空间的位置和长度大小等！
 
-int max(int x,int y)
-{
-    return (x&gt;y ? x : y);
-}
-int main(void)
-{
-    int (*p)(int ,int);//函数指针：数据类型标志符 （指针变量名）（形参列表）
-    int a,b,c;
-    p=max; //将max函数的首地址给指针f
-    scanf(&quot;%d%d&quot;,&amp;a,&amp;b);
-    c=(*p)(a,b); //指针进行调用函数
-    printf(&quot;a=%d,b=%d,max=%d\n&quot;,a,b,c);
-    return 0; 
-}
-/*这里p指的是一个指针变量，不像函数名字，他可以指向任何函数*/
-</code></pre><font color="blue">p变量里面存放了max函数的地址。<code>*p</code>，此时，就相当于是取这个函数了（可以这么去理解），用来进行调用函数了。<br><br>相当于是p存放了max这个函数的地址，在用指针去调用函数max时，需要写成（<code>*p</code>）这个样子</font>
-
-<h5 id="案例2"><a href="#案例2" class="headerlink" title="案例2"></a>案例2</h5><h6 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h6><p>下面的这个案例来说明一下上面这个问题</p>
-<pre><code>#include &lt;stdio.h&gt;
-int asdf(int a)
-{
-    printf(&quot;%d\n&quot;,a);
-    return 0;
-}
-int main(void)
-{
-    int (*p)(int);
-    asdf(5); //通过函数名调用函数
-    p=asdf; //将asdf函数的首地址给指针p
-    (*p)(5); //调用函数asdf
-    p(5);  //调用函数asdf
-    printf(&quot;asdf is %d,p is %d,*p is %d\n&quot;,asdf,p,*p);
-    return 0;
-
-}
-</code></pre><p>输出:</p>
-<pre><code>5
-5
-5
-asdf is 4198410,p is 4198410,*p is 4198410
-</code></pre><h6 id="解释"><a href="#解释" class="headerlink" title="解释"></a>解释</h6><p>1.通过函数名调用函数和通过函数指针调用函数的区别  </p>
-<p>答：   </p>
-<p>1) 通过函数名调用函数<br>eg:asdf(5);</p>
-<p>步骤：<br>根据已知函数地址调用对应函数。</p>
-<p>2) 函数指针调用函数<br>eg:(*p)(5);</p>
-<p>1.从指针中读取函数入口地址。<br>2.调用对应函数。</p>
-<p>它们之间的区别一句话概括，那就是函数名是入口地址的代号，只在编译时发挥作用（等价于一个固定地址，所以函数名不能被赋值），函数指针在执行期发挥作用（指针值可以变化，可以赋值。所以(*p)(5)与asdf(5)等价</p>
-<p>2.为什么(*p)(5)与p(5)结果相等  </p>
-<p>利用函数指针进行调用：  </p>
-<p>(*p)()<br>p()  </p>
-<p>很久很久以前C语言只允许前者，后来大家觉得这么写太麻烦就规定了后者能达到同样效果。后者在编译时和前者做相同的事情。它只是语法上的便利,本质上是一样的.  </p>
-<font color="orange"><br>类似的语法上的便利还有:<br><br>p-&gt;h 通过指针访问结构成员，等价于 (<em>p).h<br>p[n] 通过指针访问数组元素等价于 </em>(p+n) </font>
-
-<h5 id="案例三"><a href="#案例三" class="headerlink" title="案例三"></a>案例三</h5><pre><code> /*  函数指针的使用示例
-    在下面的例子中，着重学习如何通过fun函数中的第三个参数来实现对加减乘等操作的处理。
-    需要注意以下几点：
-    1. fun函数中第三个形参，函数指针的书写格式int (*p)(int, int)和使用格式(*p)(x, y)
-    2. 在调用fun函数时，送入的实参可以有两种形式。
-        A.  函数指针作为实参——注意ppp的定义格式       int (*ppp)(int, int);
-                                    ppp的赋值写法       ppp= max;    注意，没有括号！没有形参表！此处是将max函数在程序代码区中存储的首地址赋给ppp，并不是函数调用！
-                                    ppp作为实参的写法   fun(a, b, ppp)  没有括号，没有形参表！此处，fun的第三个参数ppp就是一个地址
-
-        B.  函数名称作为实参——注意书写格式            fun(a, b, add);
-                                     在C语言中，函数名字本身，和数组名称类似，代表了其在内存中存储的首地址
-    */
-
+*/
 #include &lt;stdio.h&gt;
 
-int fun(int x, int y, int (*p)(int, int));
-int max(int x, int y);
-int min(int x, int y);
-int add(int x, int y);
+void sort(char *name[], int n);
+void printf(char *name[], int n);
 
 int main(void)
 {
-    int a = 34, b = 22, result;
-    char n;
-    int (*ppp)(int, int);
-    ppp= NULL;
-    printf(&quot;请选择：1.求大值，2.求小值，3.求和:&quot;);
-    n = getchar();
-    switch(n)
-    {
-        case &apos;1&apos;:
-            ppp= max;
-            result = fun(a, b, ppp);
-            break;
-        case &apos;2&apos;:
-            result = fun(a, b, min);
-            break;
-        case &apos;3&apos;:
-            result = fun(a, b, add);
-            break;
-        default:
-            printf(&quot;选择错误！\n&quot;);
-    }
-    printf(&quot;%d\n&quot;, result);
+    /*
+      定义了一个指针数组name，通过字符串赋初值的方式给name中的每个元素（一个指针）赋初值
+      需要注意的是：此处这种赋初值的方式，字符串常量全都是存储在程序的常量区，并且是根据
+      字符串的实际长度来申请的空间（此步骤由编译系统自动完成，无需程序员再去malloc）。另
+      外，数组的长度，也是有编译器自动确定的。
+      如果各个字符串的值事先不确定，需要程序运行时由用户来确定，则本程序仍然需要调用malloc
+      函数去实现。
+    */
+    char *name[]={&quot;Follow me&quot;, &quot;BASIC&quot;, &quot;Great Wall&quot;, &quot;FORTRAN&quot;, &quot;Computer design&quot;};
+    int n = 5;
+
+    sort(name, n);
+    printf(name, n);
     return 0;
 }
 
-int fun(int x, int y, int (*p)(int, int)) //第三个参数需要一个指针p，该参数p是一个函数指针，是专门指向“有2个int型形参且返回int的这类函数”的指针
+/***************************************************************************************
+    基于指针元素类型的数组的简单选择排序方法
+
+    排序算法不变，只不过此处元素是指针，指向字符串，所以相互的比较需要借助strcmp函数来实现，
+而不是直接使用&gt;或&lt;号
+ **************************************************************************************/
+void sort(char *name[], int n)
 {
-    int result;
-    result = (*p)(x, y);   //注意书写格式！  调用该类（int XXX(int, int)）函数所需要的实参，往往都是通过“外壳”函数fun的形参x和y传进来~~
-    return result;
+    char *temp;
+    int i, j, k;
+
+    for (i = 0; i &lt; n - 1; i++)  //确定子序列的变化的左端
+    {
+        k = i;    //假定子序列的第一个元素是最大的
+        for (j = i + 1; j &lt; n; j++)
+        {
+            if (strcmp(name[k], name[j]) &gt; 0)
+            {
+                k=j;   //若后续元素更大，则刷新最大元素下标k
+            }
+        }
+        if (k != i)    //找到最大元素下标k的值之后，将最大值和第一个元素的值交换
+        {
+            temp = name[i];
+            name[i] = name[k];
+            name[k] = temp;
+        }
+    }
 }
 
-
-/* 
-    注意！函数指针往往出现在当多个函数的函数类型相同的情况下！
-    需要注意的是，如果max，min和add函数的类型不是  int XXX(int, int)这种类型，则不能作为fun函数的第三个参数，而
- fun函数如果不能将多个子函数进行整合，则fun函数将失去其存在的意义！
- */
-
-int max(int x, int y)
+void printf(char *name[], int n)
 {
-    printf(&quot;大值是:&quot;);
-    return x &gt; y ? x : y;
-}
+    int i;
 
-int min(int x, int y)
-{
-    printf(&quot;小值是:&quot;);
-    return x &gt; y ? y : x;
+    for(i = 0; i &lt; n; i++)
+    {
+        printf(&quot;%s\n&quot;, name[i]);
+    }
 }
+</code></pre><h4 id="图解"><a href="#图解" class="headerlink" title="图解"></a>图解</h4><p><img src="/upload_images/6.png" alt=""></p>
+<h2 id="数组指针"><a href="#数组指针" class="headerlink" title="数组指针"></a>数组指针</h2><h3 id="什么是数组指针"><a href="#什么是数组指针" class="headerlink" title="什么是数组指针"></a>什么是数组指针</h3><p>数组指针 ： 本质是指针（四个字节的变量） 指向数组的指针</p>
+<p>数组指针：a pointer to an array，即指向数组的指针</p>
+<h3 id="数组指针怎么定义"><a href="#数组指针怎么定义" class="headerlink" title="数组指针怎么定义"></a>数组指针怎么定义</h3><p>类型说明符 (* 指针变量名) [数组长度]</p>
+<pre><code>int (*p)[n];
+</code></pre><p>()优先级高，首先说明p是一个指针，指向一个整型的一维数组，这个一维数组的长度是n，也可以说是p的步长。也就是说执行p+1时，p要跨过n个整型数据的长度。</p>
+<h3 id="使用-1"><a href="#使用-1" class="headerlink" title="使用"></a>使用</h3><h4 id="快速入门-1"><a href="#快速入门-1" class="headerlink" title="快速入门"></a>快速入门</h4><p>元素表示：(*p)[i]</p>
+<p>如要将二维数组赋给一指针，应这样赋值：</p>
+<pre><code>int a[3][4];
+int (*p)[4]; //该语句是定义一个数组指针，指向含4个元素的一维数组。
+ p=a;        //将该二维数组的首地址赋给p，也就是a[0]或&amp;a[0][0]
+/*也可以p=&amp;a[0][0];*/
+ p++;       //该语句执行过后，也就是p=p+1;p跨过行a[0][]指向了行a[1][]
+</code></pre><h4 id="实现-1"><a href="#实现-1" class="headerlink" title="实现"></a>实现</h4><h5 id="图解-1"><a href="#图解-1" class="headerlink" title="图解"></a>图解</h5><p><img src="/upload_images/7.png" alt=""></p>
+<h5 id="案例1-数组指针和指针数组的对比"><a href="#案例1-数组指针和指针数组的对比" class="headerlink" title="案例1(数组指针和指针数组的对比)"></a>案例1(数组指针和指针数组的对比)</h5><pre><code>#include &lt;iostream&gt;
 
-int add(int x, int y)
+using namespace std;
+
+int main()
 {
-    printf(&quot;和值是:&quot;);
-    return x + y;
+int c[4]={1,2,3,4};
+int *a[4]; //指针数组
+int (*b)[4]; //数组指针
+b=&amp;c;
+//将数组c中元素赋给数组a
+for(int i=0;i&lt;4;i++)
+{
+a[i]=&amp;c[i];
 }
-</code></pre><h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>洋洋洒洒的总结了那么多，终于有一种恍然大悟的感觉了，再想一下。  </p>
-<p>函数指针：指向函数的指针，可以通过这个指针调用函数，前提是要把这个函数的地址传给指针，再调用函数（*指针变量名）  </p>
-<p>指针函数：返回值是指针类型的函数。因为返回的是一个地址，通常可以和数组结合一下。比如返回某一数组元素的地址。（由于返回的是地址，就直接函数名（形参）用就可以了）</p>
+//输出看下结果
+cout&lt;&lt;*a[1]&lt;&lt;endl; //输出2就对
+cout&lt;&lt;(*b)[2]&lt;&lt;endl; //输出3就对
+return 0;
+}
+</code></pre><p>注意：定义了数组指针，该指针指向这个数组的首地址，必须给指针指定一个地址，容易犯的错得就是，不给b地址，直接用(<code>*b</code>)[i]=c[i]给数组b中元素赋值，这时数组指针不知道指向哪里，调试时可能没错，但运行时肯定出现问题，使用指针时要注意这个问题。但为什么a就不用给他地址呢，a的元素是指针，实际上for循环内已经给数组a中元素指定地址了。但若在for循环内写<code>*a[i]</code>=c[i]，这同样会出问题。</p>
+<h5 id="案例2"><a href="#案例2" class="headerlink" title="案例2"></a>案例2</h5><pre><code>#include &lt;stdio.h&gt;
+int main()  
+{  
+    int a[2][2]={1,2,3,4};//这是一个2*2的二维数组  
+    int (*p)[2];//数组指针  
+    p=a;//令p指向数组a
+    return 0;  
+}
+</code></pre><h6 id="分析数组，指针变量在内存中的存放"><a href="#分析数组，指针变量在内存中的存放" class="headerlink" title="分析数组，指针变量在内存中的存放"></a>分析数组，指针变量在内存中的存放</h6><p>  a中各个元素在内存中的样子</p>
+<p> <img src="/upload_images/8.png" alt="">    </p>
+<p>现在我们思考a,a[0],a[1],p,a+1,a[0]+1,p+1到底是什么？</p>
+<p> <img src="/upload_images/9.png" alt="">    </p>
+<p>分析：</p>
+<p>a是一个数组名，类型是指向一维数组的指针，不是变量，a的值是指针常量，即不能有a++或者a=p这些操作。a指向这块连续空间的首地址，值是&amp;a[0][0]。</p>
+<p>a[0]是一维数组名，类型是指向整型的指针，值是&amp;a[0][0]，这个值是一个常量。</p>
+<p>a[1]是一维数组名，类型是指向整型的指针，值是&amp;a[1][0]，这个值是一个常量。</p>
+<p>p是一个数组指针变量，指向一维数组的指针变量，值是&amp;a[0][0]。可以执行p++;p=a等操作。</p>
+<p>a+1表示指向下一行元素，也可以理解为指向下一个一维数组。</p>
+<p>*(a+1)是取出第一行的首地址。</p>
+<p>a[0]+1是指向第0行第1个元素，也可以理解为指向一维数组a[0]的第一个元素。</p>
+<p>p+1同a+1</p>
+<p><code>*(p+1)</code>同<code>*(a+1)</code></p>
+<p>虽然a跟a[0]值是一样，但类型不一样，表示的意义不一样。通过分析就不难理解为什么<code>*(*(a+i)+j)</code>和a[i][j]等效了。</p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="1-数组名和数组指针变量的长度"><a href="#1-数组名和数组指针变量的长度" class="headerlink" title="1.数组名和数组指针变量的长度"></a>1.数组名和数组指针变量的长度</h3><h4 id="案例1"><a href="#案例1" class="headerlink" title="案例1"></a>案例1</h4><pre><code>#include&lt;stdio.h&gt;  
+int  main()  
+{  
+    int a[2][2]={1,2,3,4};//这是一个2*2的二维数组  
+    int (*p)[2];//数组指针  
+    p=a;//令p指向数组a  
+    printf(&quot;%d\n%d\n&quot;,sizeof a,sizeof p); 
+    return 0;
+}
+</code></pre><p>输出：</p>
+<pre><code>16
+4
+</code></pre><p>p是一个指针变量，这个变量占用四个字节。而a是数组名，所以sizeof a返回数组a中的全部元素占用的字节数。</p>
+<h4 id="案例2-1"><a href="#案例2-1" class="headerlink" title="案例2"></a>案例2</h4><pre><code>include&lt;stdio.h&gt;  
+
+int main()  
+{  
+    int a[2][2]={1,2,3,4};//这是一个2*2的二维数组  
+    int (*p)[2];//数组指针  
+    p=a;//令p指向数组a  
+    printf(&quot;%d\n%d\n&quot;,sizeof(a+1),sizeof(p+1));  
+    printf(&quot;%d\n%d\n&quot;,sizeof(a+0),sizeof(p+0)); 
+    return  0;
+}
+</code></pre><p>输出：</p>
+<pre><code>4
+4
+4
+4
+</code></pre><p>a在做+运算时是转化成了指针变量，但a[i]是一个一维数组的数组名，sizeof(a[0])的值是8。</p>
+<h4 id="案例3"><a href="#案例3" class="headerlink" title="案例3"></a>案例3</h4><pre><code>#include&lt;stdio.h&gt;  
+
+void f(int a[][2])  
+{  
+    printf(&quot;%d\n&quot;,sizeof a);  
+}  
+int  main()  
+{  
+    int a[2][2]={1,2,3,4};//这是一个2*2的二维数组  
+    printf(&quot;%d\n&quot;,sizeof a);  
+    f(a);  
+    return 0；
+}
+</code></pre><p>输出：</p>
+<pre><code>16
+4
+</code></pre><p>因为传参的时候数组名a转化成指针变量，注意到函数f中f(int a[][2])这里并不需要指定二维数组的长度，此处可以改为int (*a)[2]。所以传过来的就是一个数组指针变量。</p>
+<h3 id="2-转化"><a href="#2-转化" class="headerlink" title="2.转化"></a>2.转化</h3><p>p+1   &lt;-&gt;  a+1  &lt;-&gt;   &amp;a[1]   &lt;-&gt;  &amp;p[1]</p>
+<p><code>*(p+1)</code>  &lt;-&gt;   <code>*(a+1)</code>  &lt;-&gt;   a[1]   &lt;-&gt;   p[1]</p>
+<p>p+i  &lt;-&gt;  a+i  &lt;-&gt;   &amp;a[i]   &lt;-&gt;   &amp;p[i]</p>
+<p><code>*(p+i)</code> &lt;-&gt;  <code>*(a+i)</code> &lt;-&gt;   a[i]   &lt;-&gt;   p[i]</p>
+<h3 id="3-数组指针的一维和二维数组"><a href="#3-数组指针的一维和二维数组" class="headerlink" title="3.数组指针的一维和二维数组"></a>3.数组指针的一维和二维数组</h3><h4 id="一维数组"><a href="#一维数组" class="headerlink" title="一维数组"></a>一维数组</h4><pre><code>如果a是一维数组，则有如下：
+ a表示数组的首地址，即数组中第0个元素的地址
+ *a= *(a+0) &lt;-&gt; a[0] ，表示数组的第0个元素的值-
+ *(a+i) &lt;-&gt; a[i] 是a一维数组的第i个元素的值
+</code></pre><h4 id="二维数组"><a href="#二维数组" class="headerlink" title="二维数组"></a>二维数组</h4><pre><code>如果a是二维数组，则有如下：
+ a表示数组的首地址，即数组中第0行的首地址
+ a+i是数组中第i行的首地址，即行指针
+ *a= *(a+0) &lt;-&gt; a[0]是数组第0行的数组名，第0行第0列的起始地址；也可以看成是a一维数组的第0个元素(行)的地址
+ *(a+i) &lt;-&gt; a[i]是数组第i行的数组名，第i行第0列的起始地址；也可以看成是a一维数组的第i个元素(行)的地址
+ *(a+i)+j &lt;-&gt; a[i]+j &lt;-&gt; &amp;a[i][j]是第i行第j列的起始地址，即列指针
+ *(*(a+i)+j) &lt;-&gt; *(a[i]+j) &lt;-&gt; a[i][j]是第i行第j列的元素值
+</code></pre><h3 id="4-p-与-p-的区别"><a href="#4-p-与-p-的区别" class="headerlink" title="4.*(p++)与*(++p)的区别"></a>4.<code>*(p++)</code>与<code>*(++p)</code>的区别</h3><p>注：<code>*p++</code> &lt;-&gt; <code>*(p++)</code><br><code>*(p++)</code>是先执行 <code>*p</code>，后指针p累加，指向下一个地址</p>
+<p><code>*（++p）</code>是先将p加一后再指向结果所在的地址</p>
 
       
     </div>
@@ -608,8 +640,8 @@ int add(int x, int y)
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/09/08/1/" rel="next" title="内存四区的理解">
-                <i class="fa fa-chevron-left"></i> 内存四区的理解
+              <a href="/2017/09/09/指针函数和函数指针/" rel="next" title="指针函数和函数指针">
+                <i class="fa fa-chevron-left"></i> 指针函数和函数指针
               </a>
             
           </div>
@@ -617,10 +649,6 @@ int add(int x, int y)
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/09/09/指针数组和数组指针/" rel="prev" title="指针数组和数组指针">
-                指针数组和数组指针 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -797,7 +825,7 @@ int add(int x, int y)
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#指针函数"><span class="nav-number">2.</span> <span class="nav-text">指针函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是指针函数"><span class="nav-number">2.1.</span> <span class="nav-text">什么是指针函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#指针函数怎么定义"><span class="nav-number">2.2.</span> <span class="nav-text">指针函数怎么定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用"><span class="nav-number">2.3.</span> <span class="nav-text">使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#快速入门"><span class="nav-number">2.3.1.</span> <span class="nav-text">快速入门</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实现"><span class="nav-number">2.3.2.</span> <span class="nav-text">实现</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数指针"><span class="nav-number">3.</span> <span class="nav-text">函数指针</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是函数指针"><span class="nav-number">3.1.</span> <span class="nav-text">什么是函数指针</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数指针怎么定义"><span class="nav-number">3.2.</span> <span class="nav-text">函数指针怎么定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用-1"><span class="nav-number">3.3.</span> <span class="nav-text">使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#快速入门-1"><span class="nav-number">3.3.1.</span> <span class="nav-text">快速入门</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实现-1"><span class="nav-number">3.3.2.</span> <span class="nav-text">实现</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#案例1"><span class="nav-number">3.3.2.1.</span> <span class="nav-text">案例1</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#案例2"><span class="nav-number">3.3.2.2.</span> <span class="nav-text">案例2</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#代码"><span class="nav-number">3.3.2.2.1.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#解释"><span class="nav-number">3.3.2.2.2.</span> <span class="nav-text">解释</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#案例三"><span class="nav-number">3.3.2.3.</span> <span class="nav-text">案例三</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#后记"><span class="nav-number">4.</span> <span class="nav-text">后记</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#指针数组"><span class="nav-number">2.</span> <span class="nav-text">指针数组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是指针数组"><span class="nav-number">2.1.</span> <span class="nav-text">什么是指针数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#指针数组怎么定义"><span class="nav-number">2.2.</span> <span class="nav-text">指针数组怎么定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用"><span class="nav-number">2.3.</span> <span class="nav-text">使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#快速入门"><span class="nav-number">2.3.1.</span> <span class="nav-text">快速入门</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实现"><span class="nav-number">2.3.2.</span> <span class="nav-text">实现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#图解"><span class="nav-number">2.3.3.</span> <span class="nav-text">图解</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组指针"><span class="nav-number">3.</span> <span class="nav-text">数组指针</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是数组指针"><span class="nav-number">3.1.</span> <span class="nav-text">什么是数组指针</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组指针怎么定义"><span class="nav-number">3.2.</span> <span class="nav-text">数组指针怎么定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用-1"><span class="nav-number">3.3.</span> <span class="nav-text">使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#快速入门-1"><span class="nav-number">3.3.1.</span> <span class="nav-text">快速入门</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实现-1"><span class="nav-number">3.3.2.</span> <span class="nav-text">实现</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#图解-1"><span class="nav-number">3.3.2.1.</span> <span class="nav-text">图解</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#案例1-数组指针和指针数组的对比"><span class="nav-number">3.3.2.2.</span> <span class="nav-text">案例1(数组指针和指针数组的对比)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#案例2"><span class="nav-number">3.3.2.3.</span> <span class="nav-text">案例2</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#分析数组，指针变量在内存中的存放"><span class="nav-number">3.3.2.3.1.</span> <span class="nav-text">分析数组，指针变量在内存中的存放</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他"><span class="nav-number">4.</span> <span class="nav-text">其他</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-数组名和数组指针变量的长度"><span class="nav-number">4.1.</span> <span class="nav-text">1.数组名和数组指针变量的长度</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#案例1"><span class="nav-number">4.1.1.</span> <span class="nav-text">案例1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#案例2-1"><span class="nav-number">4.1.2.</span> <span class="nav-text">案例2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#案例3"><span class="nav-number">4.1.3.</span> <span class="nav-text">案例3</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-转化"><span class="nav-number">4.2.</span> <span class="nav-text">2.转化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-数组指针的一维和二维数组"><span class="nav-number">4.3.</span> <span class="nav-text">3.数组指针的一维和二维数组</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#一维数组"><span class="nav-number">4.3.1.</span> <span class="nav-text">一维数组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二维数组"><span class="nav-number">4.3.2.</span> <span class="nav-text">二维数组</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-p-与-p-的区别"><span class="nav-number">4.4.</span> <span class="nav-text">4.*(p++)与*(++p)的区别</span></a></li></ol></li></ol></div>
             
 
           </div>
