@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="CTF-Misc," />
+  <meta name="keywords" content="数据结构," />
 
 
 
@@ -94,18 +94,21 @@
 
 
 
-<meta name="description" content="大鹏一日同风起，扶摇直上九万里一直比较喜欢做杂项（虽然还是很垃圾），就感觉很有意思。总结了一些关于图片隐写的姿势，一起学习~ 1.另存为图片 （还有直接看文件信息，可能就在文件信息里面）   2.改后缀 zip / rar /txt">
-<meta name="keywords" content="CTF-Misc">
+<meta name="description" content="一息若存，希望不灭。   顺序表的分类1. 静态分配储存空间#define MAXSIZE 100 typedef  struct {     char   Data[MAXSIZE];    //100个字节     int   curlen;                                //4个字节     int   totalLen;">
+<meta name="keywords" content="数据结构">
 <meta property="og:type" content="article">
-<meta property="og:title" content="图片隐写术总结">
-<meta property="og:url" content="http://yoursite.com/2017/08/21/1/index.html">
+<meta property="og:title" content="线性表之顺序表理解">
+<meta property="og:url" content="http://yoursite.com/2018/01/19/1/index.html">
 <meta property="og:site_name" content="M3tar&#39;s Blog">
-<meta property="og:description" content="大鹏一日同风起，扶摇直上九万里一直比较喜欢做杂项（虽然还是很垃圾），就感觉很有意思。总结了一些关于图片隐写的姿势，一起学习~ 1.另存为图片 （还有直接看文件信息，可能就在文件信息里面）   2.改后缀 zip / rar /txt">
+<meta property="og:description" content="一息若存，希望不灭。   顺序表的分类1. 静态分配储存空间#define MAXSIZE 100 typedef  struct {     char   Data[MAXSIZE];    //100个字节     int   curlen;                                //4个字节     int   totalLen;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-25T06:53:17.652Z">
+<meta property="og:image" content="http://yoursite.com/upload_images/线性表——顺序表的理解/1509418404906.png">
+<meta property="og:image" content="http://yoursite.com/upload_images/线性表——顺序表的理解/1509466697078.png">
+<meta property="og:updated_time" content="2018-01-19T08:56:03.650Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="图片隐写术总结">
-<meta name="twitter:description" content="大鹏一日同风起，扶摇直上九万里一直比较喜欢做杂项（虽然还是很垃圾），就感觉很有意思。总结了一些关于图片隐写的姿势，一起学习~ 1.另存为图片 （还有直接看文件信息，可能就在文件信息里面）   2.改后缀 zip / rar /txt">
+<meta name="twitter:title" content="线性表之顺序表理解">
+<meta name="twitter:description" content="一息若存，希望不灭。   顺序表的分类1. 静态分配储存空间#define MAXSIZE 100 typedef  struct {     char   Data[MAXSIZE];    //100个字节     int   curlen;                                //4个字节     int   totalLen;">
+<meta name="twitter:image" content="http://yoursite.com/upload_images/线性表——顺序表的理解/1509418404906.png">
 
 
 
@@ -134,13 +137,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/08/21/1/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/01/19/1/"/>
 
 
 
 
 
-  <title>图片隐写术总结 | M3tar's Blog</title>
+  <title>线性表之顺序表理解 | M3tar's Blog</title>
   
 
 
@@ -301,7 +304,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/21/1/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/19/1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="M3tar">
@@ -318,7 +321,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">图片隐写术总结</h1>
+          <h1 class="post-title" itemprop="name headline">线性表之顺序表理解</h1>
         
 
         <div class="post-meta">
@@ -330,8 +333,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-21T19:06:53+08:00">
-                2017-08-21
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-19T16:33:11+08:00">
+                2018-01-19
               </time>
             
 
@@ -353,8 +356,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/CTF-Misc/" itemprop="url" rel="index">
-                    <span itemprop="name">CTF-Misc</span>
+                  <a href="/categories/数据结构/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构</span>
                   </a>
                 </span>
 
@@ -390,23 +393,522 @@
       
 
       
-        <p><blockquote class="blockquote-center"><br>大鹏一日同风起，扶摇直上九万里</blockquote><br>一直比较喜欢做杂项（虽然还是很垃圾），就感觉很有意思。总结了一些关于图片隐写的姿势，一起学习~</p>
-<p>1.另存为图片 （还有直接看文件信息，可能就在文件信息里面）  </p>
-<p>2.改后缀 zip / rar /txt<br><a id="more"></a><br>3.扔winhex  这里要看文件头和文件结束的位置<br>  Jpg文件头：FFD8FF，结尾都是FF D9<br>  gif的开头是GIF8（47494638）<br>  PNG (png)，文件头：89504E47<br>  ZIP Archive (zip)，文件头：504B0304<br>  RAR Archive (rar)，文件头：52617221<br>  ……<br>  这是一些文件头标志的网站：<a href="http://www.cnblogs.com/mq0036/p/3912355.html" target="_blank" rel="external">http://www.cnblogs.com/mq0036/p/3912355.html</a>  </p>
-<p>4.修复文件  </p>
-<p>5.分离图片：扔binwalk</p>
-<p>  #binwalk 2.jpg<br>  找到偏移位置</p>
-<p>  #dd if=2.jpg of=1.jpg skip=偏移位置 bs=1</p>
-<p>  if是指定输入文件，of是指定输出文件，<br>  skip是指定从输入文件开头跳过XXX(140147)个块后再开始复制，<br>  bs设置每次读写块的大小为1字节 。</p>
-<p>  还可以使用foremost</p>
-<p>  分离命令： #foremost 2.jpg 他会分离之后自己储存到一个ouput的文件夹，里面就有出现的分离图片</p>
-<p>6.谷歌识图，百度识图</p>
-<p>7.png图片</p>
-<p> ①可能还会有图片要拉长一些</p>
-<p> ②看低位（stegsolve）</p>
-<p>8.base 64 转化成为图片</p>
-<p><a href="http://www.tuicool.com/articles/VviyAfY" target="_blank" rel="external">http://www.tuicool.com/articles/VviyAfY</a> CTF图片隐写术<br><a href="http://www.jianshu.com/p/02fdd5edd9fc" target="_blank" rel="external">http://www.jianshu.com/p/02fdd5edd9fc</a>   CTF隐写总结 （有png相关题目）</p>
+        <blockquote class="blockquote-center"><br>一息若存，希望不灭。</blockquote>
 
+
+<h2 id="顺序表的分类"><a href="#顺序表的分类" class="headerlink" title="顺序表的分类"></a>顺序表的分类</h2><h3 id="1-静态分配储存空间"><a href="#1-静态分配储存空间" class="headerlink" title="1. 静态分配储存空间"></a>1. 静态分配储存空间</h3><pre><code>#define MAXSIZE 100
+typedef  struct
+{
+    char   Data[MAXSIZE];    //100个字节
+    int   curlen;                                //4个字节
+    int   totalLen;                                //4个字节
+}SeqList,  *PSeqList;   
+</code></pre><a id="more"></a>
+<h3 id="2-动态分配储存空间"><a href="#2-动态分配储存空间" class="headerlink" title="2. 动态分配储存空间"></a>2. 动态分配储存空间</h3><pre><code>typedef  struct
+{
+    char*  pData;    //4个字节
+    int   curLen;      //4个字节
+    int   totalLen;     //4个字节
+}SeqList,  *PSeqList; 
+</code></pre><h2 id="以动态链表为例"><a href="#以动态链表为例" class="headerlink" title="以动态链表为例"></a>以动态链表为例</h2><h3 id="基本想法"><a href="#基本想法" class="headerlink" title="基本想法"></a>基本想法</h3><p>1.<img src="/upload_images/线性表——顺序表的理解/1509418404906.png" alt=""></p>
+<p>2.如果想采用一个封装的想法，可以把所有的操作都写入一个类中。</p>
+<p>3.这里用C语言实现，使用函数实现。</p>
+<hr>
+<p>初始化函数：<br>InitList()</p>
+<blockquote>
+<p>main : Seqlist <em>plist = NULL;<br>          ret = InitList( &amp;pList );<br>InitList : int InitList(SeqList `*</em>`ppList)</p>
+</blockquote>
+<h3 id="二级指针"><a href="#二级指针" class="headerlink" title="二级指针"></a>二级指针</h3><font color="red"> 传 InitList(&amp;pList)</font>
+
+<blockquote>
+<p>这里为什么传入是二级指针？<br>第一种：首先plist已经是一个一级指针。再传一个地址进去，就是<code>**</code>的类型了<br>第二种：首先我要传一个东西出来，一重指针，传出来的数据类型还是一个地址（plist )，因此需要<code>**</code></p>
+</blockquote>
+<h3 id="二级指针解释关于内存图"><a href="#二级指针解释关于内存图" class="headerlink" title="二级指针解释关于内存图"></a>二级指针解释关于内存图</h3><font color="red"> 因为InitList()函数用完就会消失，所以要让plist指向堆区数组<br></font>
+
+<p><img src="/upload_images/线性表——顺序表的理解/1509466697078.png" alt=""></p>
+<hr>
+<h2 id="C语言代码实现"><a href="#C语言代码实现" class="headerlink" title="C语言代码实现"></a>C语言代码实现</h2><p>具体代码实现如下</p>
+<pre><code> /*
+    适用于标准C
+ */
+
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#define OK 1
+#define OVERFLOW 0
+#define LIST_INIT_SIZE 100
+#define LISTINCREMENT 10
+
+#define Elemtype char
+
+//公共错误码，项目组成员之间的共同约定
+#define MALLOC_ERROR  -1  
+#define NOTFIND  -2
+#define PARAM_ERROR -3
+#define REALLOC_ERROR  -4  
+//顺序表的结构定义
+typedef struct 
+{
+    Elemtype *pElem;    //动态模式，只定义了一个指针，未分配数据的存储空间。本例假设每个元素都是char型，此处是实际应用中每个元素可能会是结构体变量或者结构体指针
+    int iCount;         //当前长度
+    int iTotalLength;   //线性表的总长度
+}SeqList;               //定义一个新类型，顺序表的类型名称
+
+
+//初始化函数
+//因为本子函数想通过子函数的操作，更改主调函数中某个指针的指向，则需要用到二重指针（要在子函数中修改实参的值，需要加一重指针，而这个实参变量还是个一重指针，所以这里累计是1+1=2重指针了！！）
+//本函数假设要修改的实参指针只是一个指针变量（占4个字节，初始指向哪里不重要，为NULL也行），尚未指向任何结构体变量。
+ int InitList(SeqList **ppList)
+ {
+    SeqList *pTemp; //在子函数的栈区定义一个临时指针，以方便本函数中后续的建表过程中的各行代码的书写
+
+    pTemp= (SeqList*)malloc(sizeof(SeqList));  //先申请12个字节，用于存放顺序表的基本结构，iCount，ITotalLength和pElem成员才会存在
+    if(pTemp==NULL)
+    {
+        return MALLOC_ERROR;
+    }
+    pTemp-&gt;iCount=0; //初始时，一个元素都没有
+    pTemp-&gt;iTotalLength= LIST_INIT_SIZE;  //初始时理论总长就是100个元素（假定值）
+    pTemp-&gt;pElem= (Elemtype *)malloc( LIST_INIT_SIZE * sizeof(Elemtype));  //因为SeqList的定义中，elem只是一个指针，需要分配空间并让该指针指向这段空间。因为malloc可能迸发异常，所以实际中往往会放在try {} catch() {}结构中
+    if (pTemp-&gt;pElem==NULL)
+    {
+        free(pTemp);    //将之前申请的基本表结构所占的空间（12个字节）释放 指的是pTemp指的那个位置被释放
+        pTemp = NULL;
+        return MALLOC_ERROR;   //  返回一个非0值（通常是一个负数），表示本子函数非正常结束，以供主调函数识别和采取对应措施
+    }
+
+    *ppList= pTemp; //做好顺序表的表结构和数据区域之后，将该结构（在堆区）交付给实参（一个指针）来指向，从而完成pTemp指针的使命。
+                    //ppList是子函数在栈区中的一个指针变量，它指向主调函数中的一个指针变量，所以*ppList就是主调函数中对应的那个指针（即实参）
+
+     return 0;      //一般情况下，在实际工程开发中，基本上都默认函数返回值为0表示该函数运行期间没有异常情况
+ }
+
+//根据元素的值x，在顺序表pList中，查找其第一次出现的位置下标，并返回(注意，下标可以为0)。如果没找到，则返回NOTFIND，即-2
+int SearchByValue(SeqList *pList, Elemtype Value)
+{
+    int pos=0;
+    //重要的步骤，参数校验！一定别忘了！如果Value有一定的现实含义，则还需要对其做参数有效性校验
+    if (pList==NULL)
+    {
+        return PARAM_ERROR;
+    }
+
+    while ( pos&lt;=pList-&gt;iCount-1 &amp;&amp; pList-&gt;pElem[pos]!= Value) //一边比较，一边往后移pos的值，直到找到或者到达有效数据的末尾
+                                                               //操作总长范围
+        pos++;
+
+    if ( pos &lt;= pList-&gt;iCount-1 ) //如果是以“找到”的姿态跳出while循环
+        return pos;
+    else  
+        return NOTFIND;    //如果是以“到末尾”的姿态跳出while循环
+
+}
+
+//功能：根据给定的逻辑位置值pos（假设从1开始），在pList指向的顺序表中提取其元素值，存放到pValue指针指向的空间中并返回给主调函数使用
+//备注：pValue的写法，展示了C语言如何通过参数传递，将子函数内的数据传出来，给主调函数使用，注意形参写法和调用时的实参写法！
+//      pValue指针，假定其已经指向某个存储空间，本函数不再校验它。问题是：这个空间，应该在主调函数中申请，还是在子函数中申请？一般做法是在主调函数中申请！
+int GetValue(SeqList *pList, int pos, Elemtype *pValue) //    ret= GetValue(&amp;List1, 2, pmyValue); 
+{
+    //重要的步骤，参数校验！一定别忘了！如果Value有一定的现实含义，则还需要对其做参数有效性校验
+    if (pList==NULL || pList-&gt;pElem==NULL || pos&lt;1 || pos &gt;pList-&gt;iCount || pValue==NULL)
+    {
+        return PARAM_ERROR;
+    }
+
+    *pValue= pList-&gt;pElem[pos];                    //获得元素值
+    return 0;
+}
+
+//功能：根据指定的逻辑位置pos值（假设从0开始），在pList指向的顺序表中，第pos个元素后面插入值为Value的元素
+//备注：pos的值应&gt;=0，当pos=0时，全体所有数据都需要后移一格；当pos&gt;=iCount时，全体数据都不需要后移
+//SeqListInsert(pList1, i, (Elemtype)(&apos;H&apos;-i));
+int SeqListInsert(SeqList *pList, int pos, Elemtype Value) // 传一个表的地址，直接传一个表，不稳
+                                                           //这里排序有两种，第一种是直接传要插入的地址，就是直接知道自己要插入的地址
+                                                           //第二种，用数组，结合下标的方式插入
+                                                           //要插入的值就是value
+{
+    Elemtype *pNewBase, *p, *q;
+
+    if (pList==NULL || pList-&gt;pElem==NULL || pos &lt;0 )
+    {
+        return PARAM_ERROR;
+    }
+    if ( pos &gt; pList-&gt;iCount )//pos太大了，大过了icount
+        pos = pList-&gt;iCount ;
+
+    //如果当前已经装满，则需要扩展存储空间
+    if (pList-&gt;iCount == pList-&gt;iTotalLength)
+    {
+        pNewBase= (Elemtype *)realloc(pList-&gt;pElem, (pList-&gt;iTotalLength + LISTINCREMENT)*sizeof(Elemtype));  //请同学们进一步了解realloc的工作原理，当空间字节数较多时，该函数开销较大！
+        if (pNewBase== NULL)
+        {
+            return REALLOC_ERROR;
+        }
+
+        pList-&gt;pElem= pNewBase;
+        pList-&gt;iTotalLength= pList-&gt;iTotalLength + LISTINCREMENT;
+    }
+
+    //主逻辑
+    q= &amp;(pList-&gt;pElem[pos]); //q 指向的这个元素及其后面所有元素都需要后移一格
+    for(p= &amp;(pList-&gt;pElem[pList-&gt;iCount-1]) ; p&gt;=q; p--)  //从后面往前，循环，每个元素后移一格，直到腾出要插入的内存空间。当pos=0时，全体所有数据都需要后移一格；
+                                                          //当pos&gt;=iCount时，全体数据都不需要后移
+                                                          //第一个iCOunt=1 表示的是0
+        *(p+1)= *p;
+
+    *q= Value;  //实现插入操作
+    pList-&gt;iCount++;  //元素增加，别忘了让有效长度值iCount加1——随时维护iCount值的准确性，以方便程序员即时读取，而不是在需要的时候才去数个数
+    return 0;
+}
+
+//合并无序的顺序表  MergeOption:0 不允许重复  1允许重复
+int DisorderSeqListMerge(SeqList *pListA, SeqList *pListB, int MergeOption, SeqList **pListC)
+{
+    int i, ret;
+
+    if (pListA==NULL || pListA-&gt;pElem==NULL || pListB==NULL || pListB-&gt;pElem==NULL || MergeOption &lt; 0 || MergeOption &gt; 1 )
+    {
+        return PARAM_ERROR;
+    }
+
+    *pListC= (SeqList *)malloc( sizeof(SeqList));
+    if (*pListC==NULL)
+    {
+        return MALLOC_ERROR;
+    }
+
+    (*pListC)-&gt;iTotalLength= pListA-&gt;iTotalLength + pListB-&gt;iTotalLength;
+    (*pListC)-&gt;pElem= (Elemtype *)malloc( (*pListC)-&gt;iTotalLength * sizeof(Elemtype));  
+    if ((*pListC)-&gt;pElem==NULL)
+    {
+        if ((*pListC) != NULL)
+            free(*pListC);
+        *pListC= NULL;
+        return MALLOC_ERROR;
+    }
+
+    //将A表的数据依次复制到C表数据区
+    for(i= 0; i&lt;pListA-&gt;iCount; i++)
+        (*pListC)-&gt;pElem[i]= pListA-&gt;pElem[i];
+    (*pListC)-&gt;iCount= pListA-&gt;iCount;
+
+    for (i=0; i&lt;pListB-&gt;iCount; i++)
+    {
+        ret = SearchByValue(pListA, pListB-&gt;pElem[i]);
+        if ( ret &gt;= 0 &amp;&amp; MergeOption==0) //现有重复的元素,且不允许重复
+        {
+            //什么都不做，不执行插入操作
+        }
+        else  //没找到，没有重复的元素
+        {
+            SeqListInsert(*pListC, (*pListC)-&gt;iCount, pListB-&gt;pElem[i]);  //将LB[i]插入到新表LC的末尾
+        }
+    }
+
+    return 0;
+}
+ //测试代码，或者主程序代码，在测试InitList函数时，由你自己随意编写；在提交老板后，由项目经理或高级程序员负责编写
+int main(void)
+{
+    int ret, i;
+    SeqList List2;              //内存中为List2这个结构体变量分配4+4+4=12个字节
+    Elemtype myValue;
+    Elemtype *pmyValue= &amp;myValue;
+    SeqList *pList1= NULL;    //内存中为pList1这个结构体指针变量分配4个字节         
+    SeqList *pList2= NULL;
+    //创建演示
+    ret= InitList( &amp;pList1 );  //注意，InitList需要的是一个结构体变量的地址，故传&amp;pList1
+    if (ret==0)
+        printf(&quot;创建空的顺序表成功！表的理论总长为%d,每次如果不够，自动增长值为%d&quot;, LIST_INIT_SIZE, LISTINCREMENT);
+    else
+    {
+        printf(&quot;未能成功分配顺序表的数据存储空间，创建顺序表失败！&quot;);
+        return 0;
+    }
+
+    ret= InitList( &amp;pList2 );  //注意，InitList需要的是一个结构体变量的地址，故传&amp;List2
+    if (ret==0)
+        printf(&quot;创建空的顺序表成功！表的理论总长为%d,每次如果不够，自动增长值为%d&quot;, LIST_INIT_SIZE, LISTINCREMENT);
+    else
+    {
+        printf(&quot;未能成功分配顺序表的数据存储空间，创建顺序表失败！&quot;);
+        return 0;
+    }
+
+
+    for (i= 0; i&lt;5; i++)
+    {
+        SeqListInsert(pList1, i, (Elemtype)(&apos;H&apos;-i));
+    }
+    for (i= 0; i&lt;5; i++)
+    {
+        SeqListInsert(pList2, i, (Elemtype)(&apos;A&apos;+i));//???
+    }
+
+    //访问演示
+    ret= GetValue(pList1, 2, pmyValue);  //注意在Debug状态下看看*pmyValue的变化，理解数据传递的方向（从子函数给主调函数）
+    if (ret==0)
+        printf(&quot;你要读取表中第%d个元素，其值是%c&quot;, 2, *pmyValue); //主调函数使用子函数传出来的数据
+    else
+        printf(&quot;你要读取表中第%d个元素，本表不存在这个元素！&quot;, 2);
+
+    //无序表的合并
+    DisorderSeqListMerge(pList1, pList2, 1, &amp;pList2);
+    return 0;
+}
+</code></pre><hr>
+<h2 id="Java代码实现"><a href="#Java代码实现" class="headerlink" title="Java代码实现"></a>Java代码实现</h2><pre><code>/*
+适用于Java
+ */
+
+//定义Person类
+class Person
+{
+    public int id;
+    public String name;
+
+
+    public  Person(int id,String name)
+    {
+        this.id=id;
+        this.name=name;
+    }
+
+    public void show()
+    {
+        System.out.println(&quot;学号: &quot;+id+&quot; --- &quot;+&quot;姓名: &quot;+name);
+    }
+
+}
+
+//顺序表操作
+
+class SeqList
+{                        
+    private int currlen;// 线性表现在的长度
+    static final int maxsize = 100;//理论最大为100个元素
+    private int totalLen;// 线性表的总长度
+    Person[] data=new Person[maxsize+1];
+
+    //初始化表
+    public void InitList(SeqList arr)
+    {
+           arr.currlen=0;
+    }
+
+    //表的现有长度
+    public int ListLen(SeqList arr)
+    {
+        return (arr.currlen);
+    //    System.out.println(arr.currlen);
+
+    }
+
+   //判断表是不是空
+   public boolean isEmpty()
+    {
+       return (currlen==0)?true:false;
+    }
+
+    //添加数据
+    public int  add(SeqList arr,Person data)
+    {
+         if(arr.currlen&gt;maxsize){
+            System.out.println(&quot;顺序表已满,不能插入节点&quot;);
+            return 0;
+        }
+        arr.data[arr.currlen++]=data;
+        return 1;
+    }
+
+   //查找元素的值(根据下标)
+   public void SearchByIndex(SeqList arr,int n)
+    {
+         if( n&lt;0 || n&gt;arr.currlen)
+        {
+             System.out.println(&quot;呀！出错啦！检查一下！&quot;);
+        }
+
+       else
+        {
+           System.out.println(arr.data[n-1].id+&quot;---&quot;+arr.data[n-1].name);
+        }
+
+    }
+
+    //查找元素的下标(根据元素的值)
+    public int SearchByValue(SeqList arr,Person data) 
+    {
+         int pos=0;
+
+
+        while (pos&lt;=arr.currlen-1 &amp;&amp; arr.data[pos]!=data)
+        {
+            pos++;
+        }
+
+        if(pos &lt;= arr.currlen-1)
+        {
+            return pos;
+        }
+        else 
+        {
+            System.out.println(&quot;没有找到这个下标呀！&quot;);
+        }
+        return 1;
+    }
+
+    //插入数据
+    public int insert(SeqList arr,int pos, Person d)
+    {
+        int i;
+        if(pos&lt;0)
+        {
+            return -1;
+        }
+
+        if(pos &gt; arr.currlen)
+            pos = arr.currlen;
+
+        //装满的情况
+        if(arr.currlen &gt;= maxsize)
+        {
+            System.out.println(&quot;顺序表装满了，不能插入啦！&quot;);
+        }
+
+        //将顺序表数据往后移
+        for (i = arr.currlen;i&gt;=pos ;i-- )
+        {
+            arr.data[i+1] = arr.data[i];
+        }
+
+        arr.data[pos]=d;
+        arr.currlen++;// 元素增加！！！
+        return 1;
+
+
+    }
+
+    //删除数据
+
+    public int delete(SeqList arr,int n)
+    {
+        int i;
+        if(n&lt;=0 || n&gt;=arr.currlen)
+        {
+            System.out.println(&quot;输入出错啦，不能删除！&quot;);
+            return 0;
+        }
+
+        for (i=n;i&lt;arr.currlen ;i++ )
+        {
+            arr.data[i]=arr.data[i+1];
+        }
+        arr.currlen--;
+        return 1;
+
+    }
+    //显示所有数据
+    public int showData(SeqList arr)
+    {
+         int i;
+         for (i=0;i&lt;=arr.currlen-1; i++)
+         {
+             System.out.println(arr.data[i].id+&quot;---&quot;+arr.data[i].name);
+         }
+         return 0;
+       }
+ }
+
+class  SeqlistTest
+{
+      public static void main(String[] args) 
+    {
+
+        //开始测试
+        System.out.println(&quot;-----------------&quot;);
+        System.out.println(&quot;以下是测试&quot;);
+
+        SeqList arr= new SeqList();
+
+        //初始化
+        System.out.println(&quot;---------初始化测试--------&quot;);
+        arr.InitList(arr);
+        System.out.println(&quot;初始化完成&quot;);
+        System.out.println();
+
+
+        //查看初始化是否完成
+        System.out.println(&quot;---------确认初始化是否完成--------&quot;);
+       int i =  arr.ListLen(arr);
+
+
+     // 添加数据
+     System.out.println();
+     System.out.println(&quot;--------添加数据：张三和李四等5人---------&quot;);
+        Person data1=new Person(1,&quot;张三&quot;);
+        Person data2=new Person(2,&quot;李四&quot;);
+        Person data3=new Person(3,&quot;王五&quot;);
+        Person data4=new Person(4,&quot;唐僧&quot;);
+        Person data5=new Person(5,&quot;孙悟空&quot;);
+        Person data6=new Person(6,&quot;李倩&quot;);
+
+        arr.add(arr,data1);
+        arr.add(arr,data2);
+        arr.add(arr,data3);
+        arr.add(arr,data4);
+        arr.add(arr,data5);
+
+
+        //显示数据
+        System.out.println();
+        System.out.println(&quot;--------测试显示数据---------&quot;);
+        arr.showData(arr);
+
+
+        //判断表是不是空
+        System.out.println();
+        System.out.println(&quot;--------判断表是否为空---------&quot;);
+        boolean m = arr.isEmpty();
+        System.out.println(m);
+
+
+         //查找元素的值(根据下标)
+         System.out.println();
+         System.out.println(&quot;--------查找元素的值（根据下标），查找1---------&quot;);
+         arr.SearchByIndex(arr,1);
+
+
+
+        //查找元素的下标(根据元素的值)
+        System.out.println();
+        System.out.println(&quot;---------查找元素的下标（根据值）：查找李四--------&quot;);
+        int index = arr.SearchByValue(arr,data2) ; //m是接收哪个下标
+        arr.SearchByIndex(arr,index+1);
+
+
+
+        //插入数据
+        System.out.println();
+        System.out.println(&quot;-------测试插入数据，在arr[1]那里插入李倩----------&quot;);
+    int res1 = arr.insert(arr,1, data6);
+    arr.showData(arr);//看一下现在表什么样子
+
+
+        //删除数据
+        System.out.println();
+      System.out.println(&quot;-------测试删除数据：删除李倩----------&quot;);
+        arr.delete(arr,1);
+        arr.showData(arr);
+
+        //表的现有长度
+        System.out.println();
+    System.out.println(&quot;--------测试表现在有的长度---------&quot;);
+    int len = arr.ListLen(arr);
+    System.out.println(len);
+    }
+}
+</code></pre>
       
     </div>
     
@@ -424,7 +926,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/CTF-Misc/" rel="tag"><i class="fa fa-tag"></i> CTF-Misc</a>
+            <a href="/tags/数据结构/" rel="tag"><i class="fa fa-tag"></i> 数据结构</a>
           
         </div>
       
@@ -437,8 +939,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/08/20/音频隐写-MP3stego-wav隐写-题目/" rel="next" title="音频隐写 MP3stego+wav隐写+题目">
-                <i class="fa fa-chevron-left"></i> 音频隐写 MP3stego+wav隐写+题目
+              <a href="/2018/01/18/1/" rel="next" title="班级对抗赛write up">
+                <i class="fa fa-chevron-left"></i> 班级对抗赛write up
               </a>
             
           </div>
@@ -446,10 +948,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/08/22/1/" rel="prev" title="png图片隐写">
-                png图片隐写 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -501,8 +999,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://avatars3.githubusercontent.com/u/31129586?v=4&s=460"
@@ -615,6 +1122,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#顺序表的分类"><span class="nav-number">1.</span> <span class="nav-text">顺序表的分类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-静态分配储存空间"><span class="nav-number">1.1.</span> <span class="nav-text">1. 静态分配储存空间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-动态分配储存空间"><span class="nav-number">1.2.</span> <span class="nav-text">2. 动态分配储存空间</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#以动态链表为例"><span class="nav-number">2.</span> <span class="nav-text">以动态链表为例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本想法"><span class="nav-number">2.1.</span> <span class="nav-text">基本想法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二级指针"><span class="nav-number">2.2.</span> <span class="nav-text">二级指针</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二级指针解释关于内存图"><span class="nav-number">2.3.</span> <span class="nav-text">二级指针解释关于内存图</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C语言代码实现"><span class="nav-number">3.</span> <span class="nav-text">C语言代码实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java代码实现"><span class="nav-number">4.</span> <span class="nav-text">Java代码实现</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
